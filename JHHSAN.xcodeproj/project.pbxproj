@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					D71A57BD1DB66E00005992D0 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = BWYT76Q3DS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				INFOPLIST_FILE = JHHSAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.617365.JHHSAN;
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				INFOPLIST_FILE = JHHSAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.617365.JHHSAN;
