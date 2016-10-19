@@ -12,15 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    //ENDRI ROCKS
-
-
+        
+        Thread.sleep(forTimeInterval: 1)
+//The line above is if we want to increase the launchscreen time
 }
+
+    }
+
+
+
+
+
+
+
+//ENDRI ROCKS
+
+
 
