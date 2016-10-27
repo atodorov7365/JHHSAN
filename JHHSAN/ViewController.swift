@@ -9,15 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Thread.sleep(forTimeInterval: 1)
-//The line above is if we want to increase the launchscreen time
-}
-
+        //The line above is if we want to increase the launchscreen time
     }
+    
+}
 
 
 

@@ -13,6 +13,7 @@
 		D71A57C91DB66E00005992D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71A57C81DB66E00005992D0 /* Assets.xcassets */; };
 		D71A57CC1DB66E00005992D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71A57CA1DB66E00005992D0 /* LaunchScreen.storyboard */; };
 		D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769110D1DBA67400074D26A /* SafariViewController.swift */; };
+		D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D71A57CB1DB66E00005992D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D71A57CD1DB66E00005992D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D769110D1DBA67400074D26A /* SafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerseyHandbookViewController.swift; path = ../HerseyHandbookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D71A57C11DB66E00005992D0 /* AppDelegate.swift */,
 				D71A57C31DB66E00005992D0 /* ViewController.swift */,
 				D769110D1DBA67400074D26A /* SafariViewController.swift */,
+				D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */,
 				D71A57C51DB66E00005992D0 /* Main.storyboard */,
 				D71A57C81DB66E00005992D0 /* Assets.xcassets */,
 				D71A57CA1DB66E00005992D0 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				D71A57C41DB66E00005992D0 /* ViewController.swift in Sources */,
 				D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */,
+				D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */,
 				D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +271,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				INFOPLIST_FILE = JHHSAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.617365.JHHSAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,6 +285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				INFOPLIST_FILE = JHHSAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.617365.JHHSAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
