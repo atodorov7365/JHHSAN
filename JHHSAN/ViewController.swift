@@ -17,7 +17,6 @@ class ViewController: UIViewController {
         //The line above is if we want to increase the launchscreen time
     }
     
-}
 
 
 
@@ -29,3 +28,4 @@ class ViewController: UIViewController {
 
 
 
+}
