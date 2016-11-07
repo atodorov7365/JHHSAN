@@ -1,0 +1,6 @@
+framework module Pods_JHHSAN {
+  umbrella header "Pods-JHHSAN-umbrella.h"
+
+  export *
+  module * { export * }
+}
