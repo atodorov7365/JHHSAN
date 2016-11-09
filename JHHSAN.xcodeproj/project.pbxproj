@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E70692F1DD24AD80099F4DB /* AnimationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70692E1DD24AD80099F4DB /* AnimationClass.swift */; };
+		8E7069361DD24AE40099F4DB /* CodeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7069321DD24AE40099F4DB /* CodeCellView.swift */; };
+		8E7069371DD24AE40099F4DB /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7069341DD24AE40099F4DB /* CellView.swift */; };
+		8E7069381DD24AE40099F4DB /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7069351DD24AE40099F4DB /* CellView.xib */; };
+		8E7069421DD24AED0099F4DB /* CodePinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70693B1DD24AED0099F4DB /* CodePinkSectionHeaderView.swift */; };
+		8E7069431DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70693C1DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift */; };
+		8E7069441DD24AED0099F4DB /* PinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70693E1DD24AED0099F4DB /* PinkSectionHeaderView.swift */; };
+		8E7069451DD24AED0099F4DB /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E70693F1DD24AED0099F4DB /* PinkSectionHeaderView.xib */; };
+		8E7069461DD24AED0099F4DB /* WhiteSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7069401DD24AED0099F4DB /* WhiteSectionHeaderView.swift */; };
+		8E7069471DD24AED0099F4DB /* WhiteSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7069411DD24AED0099F4DB /* WhiteSectionHeaderView.xib */; };
 		9076E77D44D53C5C1AD8D5A1 /* Pods_JHHSAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E392AE9FAD45BDA0EA06B7 /* Pods_JHHSAN.framework */; };
 		D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A57C11DB66E00005992D0 /* AppDelegate.swift */; };
 		D71A57C41DB66E00005992D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A57C31DB66E00005992D0 /* ViewController.swift */; };
@@ -19,6 +29,16 @@
 
 /* Begin PBXFileReference section */
 		2053185111230829E44ECBEA /* Pods-JHHSAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHHSAN.release.xcconfig"; path = "Pods/Target Support Files/Pods-JHHSAN/Pods-JHHSAN.release.xcconfig"; sourceTree = "<group>"; };
+		8E70692E1DD24AD80099F4DB /* AnimationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationClass.swift; sourceTree = "<group>"; };
+		8E7069321DD24AE40099F4DB /* CodeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeCellView.swift; sourceTree = "<group>"; };
+		8E7069341DD24AE40099F4DB /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		8E7069351DD24AE40099F4DB /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		8E70693B1DD24AED0099F4DB /* CodePinkSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodePinkSectionHeaderView.swift; sourceTree = "<group>"; };
+		8E70693C1DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeWhiteSectionHeaderView.swift; sourceTree = "<group>"; };
+		8E70693E1DD24AED0099F4DB /* PinkSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkSectionHeaderView.swift; sourceTree = "<group>"; };
+		8E70693F1DD24AED0099F4DB /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
+		8E7069401DD24AED0099F4DB /* WhiteSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteSectionHeaderView.swift; sourceTree = "<group>"; };
+		8E7069411DD24AED0099F4DB /* WhiteSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteSectionHeaderView.xib; sourceTree = "<group>"; };
 		D71A57BE1DB66E00005992D0 /* JHHSAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHHSAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71A57C11DB66E00005992D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D71A57C31DB66E00005992D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +71,62 @@
 				2053185111230829E44ECBEA /* Pods-JHHSAN.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E7069301DD24AE40099F4DB /* ExampleDateCells */ = {
+			isa = PBXGroup;
+			children = (
+				8E7069391DD24AED0099F4DB /* ExampleSectionHeaders */,
+				8E7069311DD24AE40099F4DB /* DateCellCreatedWithCode */,
+				8E7069331DD24AE40099F4DB /* DateCellCreatedWithXIB */,
+			);
+			path = ExampleDateCells;
+			sourceTree = "<group>";
+		};
+		8E7069311DD24AE40099F4DB /* DateCellCreatedWithCode */ = {
+			isa = PBXGroup;
+			children = (
+				8E7069321DD24AE40099F4DB /* CodeCellView.swift */,
+			);
+			path = DateCellCreatedWithCode;
+			sourceTree = "<group>";
+		};
+		8E7069331DD24AE40099F4DB /* DateCellCreatedWithXIB */ = {
+			isa = PBXGroup;
+			children = (
+				8E7069341DD24AE40099F4DB /* CellView.swift */,
+				8E7069351DD24AE40099F4DB /* CellView.xib */,
+			);
+			path = DateCellCreatedWithXIB;
+			sourceTree = "<group>";
+		};
+		8E7069391DD24AED0099F4DB /* ExampleSectionHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				8E70693A1DD24AED0099F4DB /* HeaderAsClass */,
+				8E70693D1DD24AED0099F4DB /* HeaderAsXibs */,
+			);
+			path = ExampleSectionHeaders;
+			sourceTree = "<group>";
+		};
+		8E70693A1DD24AED0099F4DB /* HeaderAsClass */ = {
+			isa = PBXGroup;
+			children = (
+				8E70693B1DD24AED0099F4DB /* CodePinkSectionHeaderView.swift */,
+				8E70693C1DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift */,
+			);
+			path = HeaderAsClass;
+			sourceTree = "<group>";
+		};
+		8E70693D1DD24AED0099F4DB /* HeaderAsXibs */ = {
+			isa = PBXGroup;
+			children = (
+				8E70693E1DD24AED0099F4DB /* PinkSectionHeaderView.swift */,
+				8E70693F1DD24AED0099F4DB /* PinkSectionHeaderView.xib */,
+				8E7069401DD24AED0099F4DB /* WhiteSectionHeaderView.swift */,
+				8E7069411DD24AED0099F4DB /* WhiteSectionHeaderView.xib */,
+			);
+			path = HeaderAsXibs;
 			sourceTree = "<group>";
 		};
 		CC04E514F7B04FB5D5E01BA4 /* Frameworks */ = {
@@ -87,6 +163,8 @@
 				D769110D1DBA67400074D26A /* SafariViewController.swift */,
 				D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */,
 				D71A57C51DB66E00005992D0 /* Main.storyboard */,
+				8E70692E1DD24AD80099F4DB /* AnimationClass.swift */,
+				8E7069301DD24AE40099F4DB /* ExampleDateCells */,
 				D71A57C81DB66E00005992D0 /* Assets.xcassets */,
 				D71A57CA1DB66E00005992D0 /* LaunchScreen.storyboard */,
 				D71A57CD1DB66E00005992D0 /* Info.plist */,
@@ -157,8 +235,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7069381DD24AE40099F4DB /* CellView.xib in Resources */,
+				8E7069471DD24AED0099F4DB /* WhiteSectionHeaderView.xib in Resources */,
 				D71A57CC1DB66E00005992D0 /* LaunchScreen.storyboard in Resources */,
 				D71A57C91DB66E00005992D0 /* Assets.xcassets in Resources */,
+				8E7069451DD24AED0099F4DB /* PinkSectionHeaderView.xib in Resources */,
 				D71A57C71DB66E00005992D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,10 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7069421DD24AED0099F4DB /* CodePinkSectionHeaderView.swift in Sources */,
+				8E7069431DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift in Sources */,
+				8E7069461DD24AED0099F4DB /* WhiteSectionHeaderView.swift in Sources */,
 				D71A57C41DB66E00005992D0 /* ViewController.swift in Sources */,
 				D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */,
 				D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */,
+				8E7069361DD24AE40099F4DB /* CodeCellView.swift in Sources */,
+				8E70692F1DD24AD80099F4DB /* AnimationClass.swift in Sources */,
 				D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */,
+				8E7069371DD24AE40099F4DB /* CellView.swift in Sources */,
+				8E7069441DD24AED0099F4DB /* PinkSectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
