@@ -73,6 +73,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E1C3C6E1DD4E0C200EE5E61 /* Code Borrowed from JT */ = {
+			isa = PBXGroup;
+			children = (
+				8E70692E1DD24AD80099F4DB /* AnimationClass.swift */,
+				8E7069301DD24AE40099F4DB /* ExampleDateCells */,
+			);
+			name = "Code Borrowed from JT";
+			path = JHHSAN;
+			sourceTree = "<group>";
+		};
 		8E7069301DD24AE40099F4DB /* ExampleDateCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				D71A57C01DB66E00005992D0 /* JHHSAN */,
+				8E1C3C6E1DD4E0C200EE5E61 /* Code Borrowed from JT */,
 				D71A57BF1DB66E00005992D0 /* Products */,
 				4EAC0E70E7E84D88E3E3E795 /* Pods */,
 				CC04E514F7B04FB5D5E01BA4 /* Frameworks */,
@@ -163,8 +174,6 @@
 				D769110D1DBA67400074D26A /* SafariViewController.swift */,
 				D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */,
 				D71A57C51DB66E00005992D0 /* Main.storyboard */,
-				8E70692E1DD24AD80099F4DB /* AnimationClass.swift */,
-				8E7069301DD24AE40099F4DB /* ExampleDateCells */,
 				D71A57C81DB66E00005992D0 /* Assets.xcassets */,
 				D71A57CA1DB66E00005992D0 /* LaunchScreen.storyboard */,
 				D71A57CD1DB66E00005992D0 /* Info.plist */,
@@ -202,7 +211,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "John Hersey High School";
 				TargetAttributes = {
 					D71A57BD1DB66E00005992D0 = {
@@ -353,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -403,6 +413,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -432,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FCE48424D2AFA38954625E73 /* Pods-JHHSAN.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				INFOPLIST_FILE = JHHSAN/Info.plist;
@@ -447,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2053185111230829E44ECBEA /* Pods-JHHSAN.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				INFOPLIST_FILE = JHHSAN/Info.plist;
