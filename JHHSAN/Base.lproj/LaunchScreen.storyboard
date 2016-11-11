@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,13 +21,13 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Huskie" translatesAutoresizingMaskIntoConstraints="NO" id="ocg-41-QcA">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="487" id="B4r-W1-kcy"/>
-                                    <constraint firstAttribute="height" constant="551" id="nm6-E0-ZlA"/>
+                                    <constraint firstAttribute="width" constant="487" id="7ye-BP-esQ"/>
+                                    <constraint firstAttribute="height" constant="551" id="sML-NG-CVd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignment Notebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVJ-Ge-aRl">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="8lS-Ou-NYf"/>
+                                    <constraint firstAttribute="height" constant="70" id="OQn-ua-23S"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
                                 <nil key="textColor"/>
@@ -36,8 +36,8 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created By: AT,CM,ES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tw4-pX-gMk">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="239" id="2bH-jU-9PP"/>
-                                    <constraint firstAttribute="height" constant="65" id="Rfd-vK-Bqh"/>
+                                    <constraint firstAttribute="width" constant="239" id="1wL-K0-Asj"/>
+                                    <constraint firstAttribute="height" constant="65" id="2Zj-Hn-JjU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -46,13 +46,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ocg-41-QcA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9Bj-Ha-pKO"/>
-                            <constraint firstItem="Tw4-pX-gMk" firstAttribute="top" secondItem="bVJ-Ge-aRl" secondAttribute="bottom" constant="65" id="Jxo-eD-gmt"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Tw4-pX-gMk" secondAttribute="bottom" constant="9" id="bwi-Kf-qgB"/>
-                            <constraint firstItem="ocg-41-QcA" firstAttribute="centerX" secondItem="bVJ-Ge-aRl" secondAttribute="centerX" id="cQl-NY-prk"/>
-                            <constraint firstItem="bVJ-Ge-aRl" firstAttribute="centerX" secondItem="Tw4-pX-gMk" secondAttribute="centerX" id="dQ0-iO-f8u"/>
-                            <constraint firstItem="ocg-41-QcA" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="127" id="fxm-rs-Q2n"/>
-                            <constraint firstItem="bVJ-Ge-aRl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="44" id="ury-cW-cGI"/>
+                            <constraint firstItem="ocg-41-QcA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5ho-Nj-eAn"/>
+                            <constraint firstItem="Tw4-pX-gMk" firstAttribute="top" secondItem="bVJ-Ge-aRl" secondAttribute="bottom" constant="65" id="ITo-wR-5uI"/>
+                            <constraint firstItem="bVJ-Ge-aRl" firstAttribute="centerX" secondItem="Tw4-pX-gMk" secondAttribute="centerX" id="Iwe-S3-WNd"/>
+                            <constraint firstItem="ocg-41-QcA" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="127" id="RAY-at-4GO"/>
+                            <constraint firstItem="ocg-41-QcA" firstAttribute="centerX" secondItem="bVJ-Ge-aRl" secondAttribute="centerX" id="fJT-Gs-4K8"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Tw4-pX-gMk" secondAttribute="bottom" constant="9" id="mVF-Rn-7Ew"/>
+                            <constraint firstItem="bVJ-Ge-aRl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="44" id="ycr-UC-BWL"/>
                         </constraints>
                     </view>
                 </viewController>
