@@ -73,6 +73,7 @@ class ViewController: UIViewController {
         
         //Change month label attributes here
         monthLabel.font = UIFont(name: "Avenir-light", size: 20)
+        //monthLabel.textColor = UIColor(
         monthLabel.textColor = UIColor(colorLiteralRed: 0.88, green: 0.24, blue: 0.69, alpha: 1.0)
         
         monthLabel.text = monthName + " " + String(year)
