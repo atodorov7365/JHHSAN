@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         // ___________________________________________________________________
         // Registering your cells is optional
         // ___________________________________________________________________
-        calendarView.registerHeaderView(xibFileNames: ["PinkSectionHeaderView", "WhiteSectionHeaderView"])
+        calendarView.registerHeaderView(xibFileNames: ["SectionHeaderView2", "SectionHeaderView1"])
         
         
         calendarView.cellInset = CGPoint(x: 0, y: 0)
@@ -73,8 +73,7 @@ class ViewController: UIViewController {
         
         //Change month label attributes here
         monthLabel.font = UIFont(name: "Avenir-light", size: 20)
-        //monthLabel.textColor = UIColor(
-        monthLabel.textColor = UIColor(colorLiteralRed: 0.88, green: 0.24, blue: 0.69, alpha: 1.0)
+        monthLabel.textColor = UIColor.black
         
         monthLabel.text = monthName + " " + String(year)
     }
@@ -127,9 +126,9 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
                   sectionHeaderIdentifierFor range: (start: Date, end: Date),
                   belongingTo month: Int) -> String {
         if month % 2 > 0 {
-            return "WhiteSectionHeaderView"
+            return "SectionHeaderView1"
         }
-        return "PinkSectionHeaderView"
+        return "SectionHeaderView2"
     }
     
     func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
@@ -143,12 +142,15 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplaySectionHeader header: JTAppleHeaderView, range: (start: Date, end: Date), identifier: String) {
         switch identifier {
-        case "WhiteSectionHeaderView":
-            let headerCell = header as? WhiteSectionHeaderView
-            headerCell?.title.text = "White Header"
+        case "SectionHeaderView1":
+            let headerCell = header as? SectionHeaderView1
+            headerCell?.title.text = "Section Header 1"
+        case "SectionHeaderView2":
+            let headerCell = header as? SectionHeaderView2
+            headerCell?.title.text = "Section Header 2"
         default:
-            let headerCell = header as? PinkSectionHeaderView
-            headerCell?.title.text = "Pink Header"
+            let headerCell = header as? SectionHeaderView2
+            headerCell?.title.textColor = UIColor.black
         }
     }
     
