@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-UU-8Fa">
-                                <frame key="frameInset" minX="-3" minY="44" width="771" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-UU-8Fa"/>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEY-2X-NwG">
                                 <items>
                                     <navigationItem id="kHV-0g-cr6">
@@ -35,7 +32,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88T-2j-3tG" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <color key="backgroundColor" red="0.60454611820000004" green="0.65212043009999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.97583097219467163" green="0.44067798886882648" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YM-ZC-ior">
                                 <constraints>
@@ -50,13 +47,17 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="jEY-2X-NwG" secondAttribute="trailing" constant="-17" id="1Qa-qz-hCe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="88T-2j-3tG" secondAttribute="bottom" constant="398" id="1lj-NQ-YIA"/>
+                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="leading" secondItem="jEY-2X-NwG" secondAttribute="leading" id="6oE-ZG-nqw"/>
                             <constraint firstItem="jEY-2X-NwG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CEm-lG-P0F"/>
+                            <constraint firstAttribute="bottom" secondItem="C1A-UU-8Fa" secondAttribute="bottom" id="KCC-N6-yMG"/>
                             <constraint firstItem="jEY-2X-NwG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-23" id="La5-sZ-lqE"/>
                             <constraint firstItem="88T-2j-3tG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="133" id="Ley-pG-ukO"/>
                             <constraint firstItem="3YM-ZC-ior" firstAttribute="centerX" secondItem="88T-2j-3tG" secondAttribute="centerX" id="M3P-7I-wTn"/>
                             <constraint firstItem="3YM-ZC-ior" firstAttribute="top" secondItem="jEY-2X-NwG" secondAttribute="bottom" id="O07-VS-FhR"/>
                             <constraint firstItem="88T-2j-3tG" firstAttribute="top" secondItem="3YM-ZC-ior" secondAttribute="bottom" constant="8" symbolic="YES" id="PlB-kx-ldi"/>
+                            <constraint firstAttribute="trailing" secondItem="C1A-UU-8Fa" secondAttribute="trailing" id="TY4-BL-gsh"/>
                             <constraint firstItem="3YM-ZC-ior" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="atd-qj-1bx"/>
+                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="kmN-XU-0Vt"/>
                         </constraints>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -600,6 +601,6 @@
         <image name="gradient_series___orange" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Q7j-rT-nXG"/>
+        <segue reference="g0Q-a1-ZxY"/>
     </inferredMetricsTieBreakers>
 </document>
