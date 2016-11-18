@@ -24,6 +24,12 @@ class ViewController: UIViewController {
     let enabledColor = UIColor.blue
     let dateCellSize: CGFloat? = nil
     
+    let thisMonthsDateColor = UIColor.white
+    let otherMonthsDateColor = UIColor.lightGray
+    
+    let thisSelectedMonthsDateColor = UIColor.white
+    let otherSelectedMonthsDateColor = UIColor.black
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,20 +38,13 @@ class ViewController: UIViewController {
         formatter.dateFormat = "yyyy MM dd"
         testCalendar.timeZone = TimeZone(secondsFromGMT: 0)!
         
-        // Setting up your dataSource and delegate is manditory
-        // ___________________________________________________________________
+        //Setting up your dataSource and delegate is manditory
+
         calendarView.delegate = self
         calendarView.dataSource = self
         
-        
-        // ___________________________________________________________________
-        // Registering your cells is manditory
-        // ___________________________________________________________________
         calendarView.registerCellViewXib(file: "CellView")
-        
-        // ___________________________________________________________________
-        // Registering your cells is optional
-        // ___________________________________________________________________
+
         calendarView.registerHeaderView(xibFileNames: ["SectionHeaderView2", "SectionHeaderView1"])
         
         
@@ -66,14 +65,19 @@ class ViewController: UIViewController {
         guard let startDate = visibleDates.monthDates.first else {
             return
         }
+        self.calendarView.dataSource = self
+        self.calendarView.delegate = self
+        calendarView.registerCellViewXib(file: "CellView") // Registering your cell is manditory
+        calendarView.cellInset = CGPoint(x: 0, y: 0)
+        
         let month = testCalendar.dateComponents([.month], from: startDate).month!
         let monthName = DateFormatter().monthSymbols[(month-1) % 12]
         // 0 indexed array
         let year = testCalendar.component(.year, from: startDate)
         
         //Change month label attributes here
-        monthLabel.font = UIFont(name: "Avenir-light", size: 20)
-        monthLabel.textColor = UIColor.black
+        monthLabel.font = UIFont(name: "Avenir", size: 50)
+        monthLabel.textColor = UIColor.white
         
         monthLabel.text = monthName + " " + String(year)
     }
@@ -99,15 +103,52 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
         (cell as? CellView)?.setupCellBeforeDisplay(cellState, date: date)
+        
+        let customCell = cell as! CellView
+        
+        // Setup Cell text
+        customCell.dayLabel.text = cellState.text
+        
+        // Setup text color
+        if cellState.dateBelongsTo == .thisMonth {
+            customCell.dayLabel.textColor = thisMonthsDateColor
+        } else {
+            customCell.dayLabel.textColor = otherMonthsDateColor
+        }
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
         (cell as? CellView)?.cellSelectionChanged(cellState)
+        
+        let customCell = cell as! CellView
+        
+        // Setup Cell text
+        customCell.dayLabel.text = cellState.text
+        
+        // Setup text color
+        if cellState.dateBelongsTo == .thisMonth {
+            customCell.dayLabel.textColor = thisMonthsDateColor
+        } else {
+            customCell.dayLabel.textColor = otherMonthsDateColor
+        }
+        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
+        let customCell = cell as! CellView
+
         (cell as? CellView)?.cellSelectionChanged(cellState)
         
+        
+        // Setup Cell text
+        customCell.dayLabel.text = cellState.text
+        
+        // Setup text color
+        if cellState.dateBelongsTo == .thisMonth {
+            customCell.dayLabel.textColor = thisSelectedMonthsDateColor
+        } else {
+            customCell.dayLabel.textColor = otherSelectedMonthsDateColor
+        }
         //Gives rounded corners to selected view
         (cell as? CellView)?.selectedView.layer.cornerRadius = 30
     }
