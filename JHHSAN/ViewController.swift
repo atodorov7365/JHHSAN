@@ -10,6 +10,7 @@ import UIKit
 import JTAppleCalendar
 
 class ViewController: UIViewController {
+    @IBOutlet weak var Open: UIBarButtonItem!
     
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
@@ -26,6 +27,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Open.target = self.revealViewController()
+        //Open.action = #selector(SWRevealViewController.revealToggle(_:))
+        Open.action = Selector("revealToggle:")
+        
         
         Thread.sleep(forTimeInterval: 1)
         //The line above is if we want to increase the launchscreen time
