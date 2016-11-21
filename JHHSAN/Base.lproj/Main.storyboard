@@ -81,24 +81,24 @@
             </objects>
             <point key="canvasLocation" x="106" y="-536"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Back TableVC-->
         <scene sceneID="LgJ-wH-G5M">
             <objects>
-                <tableViewController id="rqI-pq-rFG" sceneMemberID="viewController">
+                <tableViewController id="rqI-pq-rFG" customClass="BackTableVC" customModule="JTAppleCalendar" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AoR-eW-182">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eID-C5-WlP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="eID-C5-WlP">
                                 <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
-                                    <frame key="frameInset" width="768" height="44"/>
+                                    <frame key="frameInset" width="768" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Jvi-Ab-4rC"/>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="M64-En-ApQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -661,8 +661,8 @@
         <image name="gradient_series___orange" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YK5-vb-NPH"/>
-        <segue reference="Jvi-Ab-4rC"/>
+        <segue reference="S94-ag-yGp"/>
         <segue reference="hqR-bU-H6G"/>
+        <segue reference="M64-En-ApQ"/>
     </inferredMetricsTieBreakers>
 </document>
