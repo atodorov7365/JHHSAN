@@ -27,9 +27,6 @@
                 <constraint firstItem="87C-Gi-crh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="52" id="vVx-Jj-9gA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="title" destination="87C-Gi-crh" id="4wT-WB-1gI"/>
-            </connections>
         </view>
     </objects>
 </document>

@@ -1,5 +1,5 @@
 //
-//  SectionHeaderView2.swift
+//  SectionHeaderView1.swift
 //  JHHSAN
 //
 //  Created by Purely Coding on 11/11/16.
@@ -9,6 +9,6 @@
 import Foundation
 import JTAppleCalendar
 
-class SectionHeaderView2: JTAppleHeaderView {
+class Header1: JTAppleHeaderView {
     @IBOutlet var title: UILabel!
 }

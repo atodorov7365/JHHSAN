@@ -10,8 +10,8 @@
 import JTAppleCalendar
 
 class CellView: JTAppleDayCellView {
-    @IBInspectable var todayColor: UIColor!// = UIColor(red: 254.0/255.0, green: 73.0/255.0, blue: 64.0/255.0, alpha: 0.3)
-    @IBInspectable var normalDayColor: UIColor! //UIColor(white: 0.0, alpha: 0.1)
+    @IBInspectable var todayColor: UIColor!
+    @IBInspectable var normalDayColor: UIColor!
     @IBOutlet var selectedView: AnimationView!
     @IBOutlet var dayLabel: UILabel!
     let textSelectedColor = UIColor.white
@@ -44,22 +44,7 @@ class CellView: JTAppleDayCellView {
         configureVisibility(cellState)
         // With cell states you can literally control every aspect of the calendar view
         // Uncomment this code block to watch "JTAPPLE" spelt on the calendar
-//        let dateSection = c.stringFromDate(cellState.dateSection().dateRange.start)
-//        if dateSection == "2016-01-01" && (cellState.row() == 0 || cellState.column() == 3 || (cellState.row() == 5 && cellState.column() < 4)) {
-//            self.backgroundColor = UIColor.redColor()
-//        } else if dateSection == "2016-02-01" && (cellState.row() == 0 || cellState.column() == 3) {
-//            self.backgroundColor = UIColor.redColor()
-//        } else if dateSection == "2016-03-01" && (cellState.column() == 0 || cellState.column() == 6 || cellState.row() == 2 || cellState.row() == 0) {
-//            self.backgroundColor = UIColor.redColor()
-//        } else if dateSection == "2016-04-01" && (cellState.column() == 0 ||
-        //(cellState.column() == 6 && cellState.row() < 3) || cellState.row() == 2 || cellState.row() == 0) {
-//            self.backgroundColor = UIColor.redColor()
-//        } else if dateSection == "2016-05-01" && (cellState.column() == 0 || (cellState.column() == 6 && cellState.row() < 3)
-            //|| cellState.row() == 2 || cellState.row() == 0) {
-//            self.backgroundColor = UIColor.redColor()
-//        } else if dateSection == "2016-06-01" && (cellState.column() == 0 || cellState.row() == 5) {
-//            self.backgroundColor = UIColor.redColor()
-//        }
+
     }
     func configureVisibility(_ cellState: CellState) {
         if
@@ -111,11 +96,7 @@ class CellView: JTAppleDayCellView {
             }
         }
         
-        if cellState.selectedPosition() == .middle {
-            selectedView.backgroundColor = UIColor.yellow
-        } else {
-            selectedView.backgroundColor = UIColor(colorWithHexValue: 0xEAA263)
-        }
+
         
     }
 }
