@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var numberOfRows = 6
     let formatter = DateFormatter()
-    var testCalendar = Calendar(identifier: Calendar.Identifier.gregorian)
+    var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
     var generateInDates: InDateCellGeneration = .forAllMonths
     var generateOutDates: OutDateCellGeneration = .tillEndOfGrid
     let firstDayOfWeek: DaysOfWeek = .sunday
@@ -24,19 +24,21 @@ class ViewController: UIViewController {
     let enabledColor = UIColor.blue
     let dateCellSize: CGFloat? = nil
     
-    let thisMonthsDateColor = UIColor.white
-    let otherMonthsDateColor = UIColor.lightGray
+    let thisMonthsDateColor = UIColor.orange
+    let otherMonthsDateColor = UIColor.darkGray
     
     let thisSelectedMonthsDateColor = UIColor.white
     let otherSelectedMonthsDateColor = UIColor.black
     
+    
+    var headerText = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Thread.sleep(forTimeInterval: 1)
         //The line above is if we want to increase the launchscreen time
         formatter.dateFormat = "yyyy MM dd"
-        testCalendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
         
         //Setting up your dataSource and delegate is manditory
 
@@ -45,7 +47,7 @@ class ViewController: UIViewController {
         
         calendarView.registerCellViewXib(file: "CellView")
 
-        calendarView.registerHeaderView(xibFileNames: ["SectionHeaderView2", "SectionHeaderView1"])
+        calendarView.registerHeaderView(xibFileNames: ["SectionHeaderView1"])
         
         
         calendarView.cellInset = CGPoint(x: 0, y: 0)
@@ -54,6 +56,7 @@ class ViewController: UIViewController {
         calendarView.visibleDates { (visibleDates: DateSegmentInfo) in
             self.setupViewsOfCalendar(from: visibleDates)
         }
+        
         
     }
     
@@ -70,16 +73,22 @@ class ViewController: UIViewController {
         calendarView.registerCellViewXib(file: "CellView") // Registering your cell is manditory
         calendarView.cellInset = CGPoint(x: 0, y: 0)
         
-        let month = testCalendar.dateComponents([.month], from: startDate).month!
+        let month = calendar.dateComponents([.month], from: startDate).month!
         let monthName = DateFormatter().monthSymbols[(month-1) % 12]
         // 0 indexed array
-        let year = testCalendar.component(.year, from: startDate)
+        let year = calendar.component(.year, from: startDate)
         
         //Change month label attributes here
         monthLabel.font = UIFont(name: "Avenir", size: 50)
         monthLabel.textColor = UIColor.white
         
+        headerText = monthLabel.text!
+        
         monthLabel.text = monthName + " " + String(year)
+        
+        
+        
+        
     }
     
 }
@@ -87,7 +96,7 @@ class ViewController: UIViewController {
 // MARK : JTAppleCalendarDelegate
 extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        let startDate = formatter.date(from: "2016 01 01")!
+        let startDate = formatter.date(from: "2016 11 09 ")!
         let endDate = formatter.date(from: "2020 12 30")!
         let parameters = ConfigurationParameters(
             startDate: startDate,
@@ -115,6 +124,12 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         } else {
             customCell.dayLabel.textColor = otherMonthsDateColor
         }
+        
+        
+        
+        customCell.todayColor = UIColor.lightGray
+        
+        customCell.normalDayColor = UIColor.white
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
@@ -130,6 +145,19 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
             customCell.dayLabel.textColor = thisMonthsDateColor
         } else {
             customCell.dayLabel.textColor = otherMonthsDateColor
+        }
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 160, y: 285)
+        label.textAlignment = .center
+        label.text = "I'm a test label"
+        
+        if calendar.selectedDates.count == 1 {
+            
+            self.view.addSubview(label)
+        }
+        else {
+            label.removeFromSuperview()
         }
         
     }
@@ -149,12 +177,16 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         } else {
             customCell.dayLabel.textColor = otherSelectedMonthsDateColor
         }
+        
         //Gives rounded corners to selected view
         (cell as? CellView)?.selectedView.layer.cornerRadius = 30
+        
+        
+        
     }
     
     
-    // NOTICE: this function is not needed for iOS 10. It will not be called
+    //Function Not needed for iOS 10; will not be called
     func calendar(_ calendar: JTAppleCalendarView, willResetCell cell: JTAppleDayCellView) {
         (cell as? CellView)?.selectedView.isHidden = true
     }
@@ -166,33 +198,21 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
     func calendar(_ calendar: JTAppleCalendarView,
                   sectionHeaderIdentifierFor range: (start: Date, end: Date),
                   belongingTo month: Int) -> String {
-        if month % 2 > 0 {
-            return "SectionHeaderView1"
-        }
-        return "SectionHeaderView2"
+        return "SectionHeaderView1"
     }
     
     func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
-        if month % 2 > 0 {
             return CGSize(width: 200, height: 50)
-        } else {
-            // Yes you can have different size headers
-            return CGSize(width: 200, height: 50)
-        }
+
     }
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplaySectionHeader header: JTAppleHeaderView, range: (start: Date, end: Date), identifier: String) {
-        switch identifier {
-        case "SectionHeaderView1":
-            let headerCell = header as? SectionHeaderView1
-            headerCell?.title.text = "Section Header 1"
-        case "SectionHeaderView2":
-            let headerCell = header as? SectionHeaderView2
-            headerCell?.title.text = "Section Header 2"
-        default:
-            let headerCell = header as? SectionHeaderView2
-            headerCell?.title.textColor = UIColor.black
-        }
+        
+        let headerCell = header as? SectionHeaderView1
+        headerCell?.title.text = "Sunday          Monday          Tuesday          Wednesday           Thursday         Friday          Saturday" //Change for iPad 3
+        
+        headerCell?.title.textColor = UIColor.white
+        
     }
     
 }
