@@ -16,6 +16,7 @@
 		8E7069421DD24AED0099F4DB /* CodePinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70693B1DD24AED0099F4DB /* CodePinkSectionHeaderView.swift */; };
 		8E7069431DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70693C1DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift */; };
 		9076E77D44D53C5C1AD8D5A1 /* Pods_JHHSAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E392AE9FAD45BDA0EA06B7 /* Pods_JHHSAN.framework */; };
+		D70CDEAE1DDE141500F56DB7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CDEAD1DDE141500F56DB7 /* SWRevealViewController.m */; };
 		D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A57C11DB66E00005992D0 /* AppDelegate.swift */; };
 		D71A57C41DB66E00005992D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A57C31DB66E00005992D0 /* ViewController.swift */; };
 		D71A57C71DB66E00005992D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71A57C51DB66E00005992D0 /* Main.storyboard */; };
@@ -91,6 +92,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D70CDEAA1DDE13B000F56DB7 /* SWReveal */ = {
+			isa = PBXGroup;
+			children = (
+				D70CDEAD1DDE141500F56DB7 /* SWRevealViewController.m */,
+				D70CDEAB1DDE13E100F56DB7 /* SWRevealViewController.h */,
+				D70CDEAC1DDE141400F56DB7 /* JHHSAN-Bridging-Header.h */,
+			);
+			name = SWReveal;
+			sourceTree = "<group>";
+		};
 		D71A57B51DB66E00005992D0 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +124,7 @@
 		D71A57C01DB66E00005992D0 /* JHHSAN */ = {
 			isa = PBXGroup;
 			children = (
+				D70CDEAA1DDE13B000F56DB7 /* SWReveal */,
 				D71A57C11DB66E00005992D0 /* AppDelegate.swift */,
 				D71A57C31DB66E00005992D0 /* ViewController.swift */,
 				D769110D1DBA67400074D26A /* SafariViewController.swift */,
@@ -163,6 +175,7 @@
 					D71A57BD1DB66E00005992D0 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = BWYT76Q3DS;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -259,6 +272,7 @@
 				D71A57C41DB66E00005992D0 /* ViewController.swift in Sources */,
 				D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */,
 				D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */,
+				D70CDEAE1DDE141500F56DB7 /* SWRevealViewController.m in Sources */,
 				8E7069361DD24AE40099F4DB /* CodeCellView.swift in Sources */,
 				8E70692F1DD24AD80099F4DB /* AnimationClass.swift in Sources */,
 				D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */,
@@ -389,12 +403,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				INFOPLIST_FILE = JHHSAN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.617365.JHHSAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JHHSAN/JHHSAN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -405,12 +422,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				INFOPLIST_FILE = JHHSAN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.617365.JHHSAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JHHSAN/JHHSAN-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
