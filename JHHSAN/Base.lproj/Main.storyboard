@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-UU-8Fa">
-                                <frame key="frameInset" minX="-256" minY="64" width="1024" height="960"/>
+                                <frame key="frameInset" minY="64" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88T-2j-3tG" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
@@ -494,7 +494,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0Q-hS-gDa">
-                                <frame key="frameInset" minX="-1" height="44" maxX="1"/>
+                                <frame key="frameInset" minX="-3" height="44" maxX="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="Ddk-qm-zhz">
@@ -661,8 +661,8 @@
         <image name="gradient_series___orange" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S94-ag-yGp"/>
+        <segue reference="ZdB-gu-NSB"/>
+        <segue reference="h21-oN-1oY"/>
         <segue reference="hqR-bU-H6G"/>
-        <segue reference="M64-En-ApQ"/>
     </inferredMetricsTieBreakers>
 </document>
