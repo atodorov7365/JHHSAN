@@ -583,7 +583,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sov-Sq-pgu">
-                                <frame key="frameInset" minX="-2" height="44" maxX="4"/>
+                                <frame key="frameInset" minX="-3" height="44" maxX="4"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="MaF-mA-av8">
@@ -701,10 +701,10 @@
         <image name="gradient_series___orange" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eNC-ij-Kx2"/>
         <segue reference="hqR-bU-H6G"/>
         <segue reference="ZdB-gu-NSB"/>
         <segue reference="7SM-nz-ZO0"/>
+        <segue reference="eNC-ij-Kx2"/>
         <segue reference="Rqc-3h-Y9W"/>
         <segue reference="eYO-4D-vGD"/>
     </inferredMetricsTieBreakers>
