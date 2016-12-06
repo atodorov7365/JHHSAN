@@ -25,7 +25,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YM-ZC-ior">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="Dk2-si-ouW"/>
+                                    <constraint firstAttribute="width" constant="502" id="Dk2-si-ouW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.29803921570000003" green="0.58039215690000001" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,12 +48,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="x7B-2P-cNa">
-                        <barButtonItem key="leftBarButtonItem" title="Resources" id="y4d-v1-haw">
-                            <connections>
-                                <segue destination="4Ad-JQ-ge9" kind="show" id="ZdB-gu-NSB"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="S0v-2d-jdA"/>
+                        <barButtonItem key="leftBarButtonItem" title="Resources" id="S0v-2d-jdA"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -97,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="first" id="eID-C5-WlP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Schedule" id="eID-C5-WlP">
                                 <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
@@ -108,7 +103,7 @@
                                     <segue destination="ngV-vM-h6v" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="eNC-ij-Kx2"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="second" id="mAQ-Nx-oTx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Website" id="mAQ-Nx-oTx">
                                 <rect key="frame" x="0.0" y="72" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAQ-Nx-oTx" id="rd4-ik-14s">
@@ -119,7 +114,7 @@
                                     <segue destination="VbX-MZ-7Tq" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="Rqc-3h-Y9W"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="third" id="9t7-Rw-fql">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Map" id="9t7-Rw-fql">
                                 <rect key="frame" x="0.0" y="116" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9t7-Rw-fql" id="xUV-DN-7eC">
@@ -130,7 +125,7 @@
                                     <segue destination="JBU-pl-mBU" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="eYO-4D-vGD"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fourth" id="0CA-M9-0HM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Handbook" id="0CA-M9-0HM">
                                 <rect key="frame" x="0.0" y="160" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CA-M9-0HM" id="HLo-HM-iLu">
@@ -165,13 +160,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHG-Dm-QWH">
-                                <frame key="frameInset" minX="-1" height="44"/>
+                                <frame key="frameInset" minX="-1" height="44" maxX="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="RpH-cH-mOG">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="VHV-Lu-ApT">
                                             <connections>
-                                                <segue destination="4Ad-JQ-ge9" kind="show" id="YK5-vb-NPH"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="gvN-ut-10l"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -515,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vc8-yk-YEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552.34375" y="138.8671875"/>
+            <point key="canvasLocation" x="1552" y="139"/>
         </scene>
         <!--HerseyHandbookViewCotroller-->
         <scene sceneID="g9Z-hr-tnz">
@@ -534,13 +529,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0Q-hS-gDa">
-                                <frame key="frameInset" minX="-2" height="44" maxX="2"/>
+                                <frame key="frameInset" minX="-3" height="44" maxX="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="Ddk-qm-zhz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Hrz-N1-qCd">
                                             <connections>
-                                                <segue destination="4Ad-JQ-ge9" kind="show" id="S94-ag-yGp"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="gwV-ba-pYn"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -583,13 +578,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sov-Sq-pgu">
-                                <frame key="frameInset" minX="-3" height="44" maxX="4"/>
+                                <frame key="frameInset" minX="-4" height="44" maxX="5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="MaF-mA-av8">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="9Y0-yg-Wwp">
                                             <connections>
-                                                <segue destination="4Ad-JQ-ge9" kind="show" id="kOL-pS-C90"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="lEz-ZJ-x80"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -632,14 +627,14 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-aJ-JcK">
-                                <frame key="frameInset" height="44"/>
+                                <frame key="frameInset" height="44" maxX="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="1ha-SG-paV">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="Dz6-Kj-BbQ"/>
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="XnP-sd-t2c">
                                             <connections>
-                                                <segue destination="4Ad-JQ-ge9" kind="show" id="Q7j-rT-nXG"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="Hei-gC-Cb8"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -701,11 +696,11 @@
         <image name="gradient_series___orange" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hqR-bU-H6G"/>
-        <segue reference="ZdB-gu-NSB"/>
-        <segue reference="7SM-nz-ZO0"/>
         <segue reference="eNC-ij-Kx2"/>
-        <segue reference="Rqc-3h-Y9W"/>
+        <segue reference="7SM-nz-ZO0"/>
         <segue reference="eYO-4D-vGD"/>
+        <segue reference="Rqc-3h-Y9W"/>
+        <segue reference="Hei-gC-Cb8"/>
+        <segue reference="1Kb-L2-4Aq"/>
     </inferredMetricsTieBreakers>
 </document>
