@@ -13,8 +13,6 @@
 		8E7069361DD24AE40099F4DB /* CodeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7069321DD24AE40099F4DB /* CodeCellView.swift */; };
 		8E7069371DD24AE40099F4DB /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7069341DD24AE40099F4DB /* CellView.swift */; };
 		8E7069381DD24AE40099F4DB /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7069351DD24AE40099F4DB /* CellView.xib */; };
-		8E7069421DD24AED0099F4DB /* CodePinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70693B1DD24AED0099F4DB /* CodePinkSectionHeaderView.swift */; };
-		8E7069431DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70693C1DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift */; };
 		9076E77D44D53C5C1AD8D5A1 /* Pods_JHHSAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E392AE9FAD45BDA0EA06B7 /* Pods_JHHSAN.framework */; };
 		D70CDEAE1DDE141500F56DB7 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A57C11DB66E00005992D0 /* AppDelegate.swift */; };
@@ -22,9 +20,10 @@
 		D71A57C71DB66E00005992D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71A57C51DB66E00005992D0 /* Main.storyboard */; };
 		D71A57C91DB66E00005992D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71A57C81DB66E00005992D0 /* Assets.xcassets */; };
 		D71A57CC1DB66E00005992D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71A57CA1DB66E00005992D0 /* LaunchScreen.storyboard */; };
+		D71BA59E1DF7156200F551B1 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71BA59D1DF7156200F551B1 /* SWRevealViewController.m */; };
 		D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769110D1DBA67400074D26A /* SafariViewController.swift */; };
-		D76E97F81DEDDA340028ABDE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76E97F71DEDDA340028ABDE /* SWRevealViewController.m */; };
 		D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */; };
+		D7809A6E1DF864AB003B236A /* mapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7809A6D1DF864AB003B236A /* mapViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +34,6 @@
 		8E7069321DD24AE40099F4DB /* CodeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodeCellView.swift; path = ExampleDateCells/DateCellCreatedWithCode/CodeCellView.swift; sourceTree = "<group>"; };
 		8E7069341DD24AE40099F4DB /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellView.swift; path = ExampleDateCells/DateCellCreatedWithXIB/CellView.swift; sourceTree = "<group>"; };
 		8E7069351DD24AE40099F4DB /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellView.xib; path = ExampleDateCells/DateCellCreatedWithXIB/CellView.xib; sourceTree = "<group>"; };
-		8E70693B1DD24AED0099F4DB /* CodePinkSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodePinkSectionHeaderView.swift; path = ExampleDateCells/ExampleSectionHeaders/HeaderAsClass/CodePinkSectionHeaderView.swift; sourceTree = "<group>"; };
-		8E70693C1DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodeWhiteSectionHeaderView.swift; path = ExampleDateCells/ExampleSectionHeaders/HeaderAsClass/CodeWhiteSectionHeaderView.swift; sourceTree = "<group>"; };
 		D71A57BE1DB66E00005992D0 /* JHHSAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHHSAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71A57C11DB66E00005992D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D71A57C31DB66E00005992D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +41,11 @@
 		D71A57C81DB66E00005992D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D71A57CB1DB66E00005992D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D71A57CD1DB66E00005992D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D71BA59C1DF7156200F551B1 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		D71BA59D1DF7156200F551B1 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D769110D1DBA67400074D26A /* SafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
-		D76E97F61DEDDA200028ABDE /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../Downloads/SWRevealViewController-master 2/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		D76E97F71DEDDA340028ABDE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../Downloads/SWRevealViewController-master 2/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerseyHandbookViewController.swift; path = ../HerseyHandbookViewController.swift; sourceTree = "<group>"; };
+		D7809A6D1DF864AB003B236A /* mapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewViewController.swift; sourceTree = "<group>"; };
 		E7E392AE9FAD45BDA0EA06B7 /* Pods_JHHSAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHHSAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE48424D2AFA38954625E73 /* Pods-JHHSAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHHSAN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHHSAN/Pods-JHHSAN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				8E70692E1DD24AD80099F4DB /* AnimationClass.swift */,
-				8E70693B1DD24AED0099F4DB /* CodePinkSectionHeaderView.swift */,
-				8E70693C1DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift */,
 				8E7069321DD24AE40099F4DB /* CodeCellView.swift */,
 				8E7069341DD24AE40099F4DB /* CellView.swift */,
 				8E7069351DD24AE40099F4DB /* CellView.xib */,
@@ -98,8 +94,8 @@
 		D70CDEAA1DDE13B000F56DB7 /* SWReveal */ = {
 			isa = PBXGroup;
 			children = (
-				D76E97F61DEDDA200028ABDE /* SWRevealViewController.h */,
-				D76E97F71DEDDA340028ABDE /* SWRevealViewController.m */,
+				D71BA59C1DF7156200F551B1 /* SWRevealViewController.h */,
+				D71BA59D1DF7156200F551B1 /* SWRevealViewController.m */,
 			);
 			name = SWReveal;
 			sourceTree = "<group>";
@@ -129,6 +125,7 @@
 				D70CDEAA1DDE13B000F56DB7 /* SWReveal */,
 				D71A57C11DB66E00005992D0 /* AppDelegate.swift */,
 				D71A57C31DB66E00005992D0 /* ViewController.swift */,
+				D7809A6D1DF864AB003B236A /* mapViewViewController.swift */,
 				D769110D1DBA67400074D26A /* SafariViewController.swift */,
 				D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */,
 				D71A57C51DB66E00005992D0 /* Main.storyboard */,
@@ -268,9 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7069421DD24AED0099F4DB /* CodePinkSectionHeaderView.swift in Sources */,
 				8E41E3B11DD61C350047F302 /* SectionHeaderView1.swift in Sources */,
-				8E7069431DD24AED0099F4DB /* CodeWhiteSectionHeaderView.swift in Sources */,
 				D71A57C41DB66E00005992D0 /* ViewController.swift in Sources */,
 				D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */,
 				D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */,
@@ -278,8 +273,9 @@
 				8E7069361DD24AE40099F4DB /* CodeCellView.swift in Sources */,
 				8E70692F1DD24AD80099F4DB /* AnimationClass.swift in Sources */,
 				D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */,
+				D7809A6E1DF864AB003B236A /* mapViewViewController.swift in Sources */,
 				8E7069371DD24AE40099F4DB /* CellView.swift in Sources */,
-				D76E97F81DEDDA340028ABDE /* SWRevealViewController.m in Sources */,
+				D71BA59E1DF7156200F551B1 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
