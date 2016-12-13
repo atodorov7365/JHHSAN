@@ -96,7 +96,7 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -107,7 +107,7 @@
                                 <rect key="frame" x="0.0" y="72" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAQ-Nx-oTx" id="rd4-ik-14s">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -118,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="116" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9t7-Rw-fql" id="xUV-DN-7eC">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -129,7 +129,7 @@
                                 <rect key="frame" x="0.0" y="160" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CA-M9-0HM" id="HLo-HM-iLu">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -140,7 +140,7 @@
                                 <rect key="frame" x="0.0" y="204" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y68-tD-OZU" id="ywX-E3-Qqz">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -626,9 +626,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-7z-5Gw">
-                                <frame key="frameInset" width="1027" height="1372"/>
+                                <frame key="frameInset" minY="44" width="1027" height="1328"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNL-is-bpF">
+                                <frame key="frameInset" height="44" maxX="-2"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Aea-Hq-R5e">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="4ec-gn-Rv1">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="UVv-3F-5y8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -735,11 +748,11 @@
         <image name="icon-menu" width="29" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYO-4D-vGD"/>
-        <segue reference="Rqc-3h-Y9W"/>
-        <segue reference="eNC-ij-Kx2"/>
-        <segue reference="7SM-nz-ZO0"/>
-        <segue reference="lEz-ZJ-x80"/>
         <segue reference="1Kb-L2-4Aq"/>
+        <segue reference="KGi-tR-A6R"/>
+        <segue reference="ac4-74-YCn"/>
+        <segue reference="hQE-SN-aYG"/>
+        <segue reference="3HF-6p-xKx"/>
+        <segue reference="UVv-3F-5y8"/>
     </inferredMetricsTieBreakers>
 </document>
