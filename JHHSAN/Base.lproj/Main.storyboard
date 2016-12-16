@@ -170,6 +170,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="c96-He-9Tj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="AwO-2r-fhD"/>
+                                    <constraint firstAttribute="height" constant="1024" id="pGE-kf-i6q"/>
+                                </constraints>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHG-Dm-QWH">
                                 <frame key="frameInset" minX="-2" height="44" maxX="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -183,10 +189,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="c96-He-9Tj">
-                                <frame key="frameInset" minY="44" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REGULAR SCHEDULE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHX-ZU-R8Y">
                                 <frame key="frameInset" minX="20" minY="105" width="168" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -448,11 +450,19 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c96-He-9Tj" firstAttribute="leading" secondItem="bgh-jk-WQJ" secondAttribute="leading" id="13u-bX-kzW"/>
+                            <constraint firstItem="cew-y9-YNe" firstAttribute="top" secondItem="c96-He-9Tj" secondAttribute="bottom" id="6RG-s7-GaE"/>
+                            <constraint firstItem="c96-He-9Tj" firstAttribute="centerY" secondItem="bgh-jk-WQJ" secondAttribute="centerY" id="Quo-Vk-p61"/>
+                            <constraint firstItem="c96-He-9Tj" firstAttribute="centerX" secondItem="bgh-jk-WQJ" secondAttribute="centerX" id="bGf-O3-wSd"/>
+                            <constraint firstAttribute="trailing" secondItem="c96-He-9Tj" secondAttribute="trailing" id="fTg-Xr-W6G"/>
+                            <constraint firstItem="c96-He-9Tj" firstAttribute="top" secondItem="bgh-jk-WQJ" secondAttribute="top" id="ipB-nY-TXp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8w-H4-7fj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552" y="-536"/>
+            <point key="canvasLocation" x="1551.5625" y="-536.1328125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0ke-Xs-QMm">
@@ -535,9 +545,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="tp7-9Q-NRf">
-                                <frame key="frameInset" minY="44" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="tp7-9Q-NRf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1024" id="hiD-qA-Qgc"/>
+                                    <constraint firstAttribute="width" constant="768" id="jvB-un-6Kn"/>
+                                </constraints>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0Q-hS-gDa">
                                 <frame key="frameInset" minX="-7" height="44" maxX="4"/>
@@ -570,6 +582,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tp7-9Q-NRf" firstAttribute="centerX" secondItem="raN-n2-fsq" secondAttribute="centerX" id="47N-Z2-mnA"/>
+                            <constraint firstItem="tp7-9Q-NRf" firstAttribute="centerY" secondItem="raN-n2-fsq" secondAttribute="centerY" id="GYN-9A-3GX"/>
+                            <constraint firstItem="tp7-9Q-NRf" firstAttribute="leading" secondItem="raN-n2-fsq" secondAttribute="leading" id="VI3-gM-rQU"/>
+                            <constraint firstItem="zMd-2a-RQ2" firstAttribute="top" secondItem="tp7-9Q-NRf" secondAttribute="bottom" id="Vvu-gi-bSt"/>
+                            <constraint firstItem="tp7-9Q-NRf" firstAttribute="top" secondItem="raN-n2-fsq" secondAttribute="top" id="far-ei-JMw"/>
+                            <constraint firstAttribute="trailing" secondItem="tp7-9Q-NRf" secondAttribute="trailing" id="wH5-mg-M3Z"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjE-TY-k3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -588,8 +608,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-lp-rId">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1024" id="G2l-ss-mJv"/>
+                                    <constraint firstAttribute="width" constant="768" id="lRm-YH-UmI"/>
+                                </constraints>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sov-Sq-pgu">
-                                <frame key="frameInset" minX="-4" height="44" maxX="6"/>
+                                <frame key="frameInset" minX="-4" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="MaF-mA-av8">
@@ -601,12 +627,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-lp-rId">
-                                <frame key="frameInset" minY="44" width="766" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Emj-lp-rId" secondAttribute="trailing" id="Q6Z-BG-6QY"/>
+                            <constraint firstItem="Emj-lp-rId" firstAttribute="centerX" secondItem="Ey3-Cp-8bK" secondAttribute="centerX" id="cXG-o6-BuB"/>
+                            <constraint firstItem="Emj-lp-rId" firstAttribute="top" secondItem="Ey3-Cp-8bK" secondAttribute="top" id="d0W-QS-mHb"/>
+                            <constraint firstItem="IFk-YO-XoN" firstAttribute="top" secondItem="Emj-lp-rId" secondAttribute="bottom" id="tUp-Bx-sYf"/>
+                            <constraint firstItem="Emj-lp-rId" firstAttribute="leading" secondItem="Ey3-Cp-8bK" secondAttribute="leading" id="wHU-1J-Ytf"/>
+                            <constraint firstItem="Emj-lp-rId" firstAttribute="centerY" secondItem="Ey3-Cp-8bK" secondAttribute="centerY" id="wtN-Sg-sjE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSk-C0-god" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -665,9 +695,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="3Ij-Wz-vDs">
-                                <frame key="frameInset" minY="44" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="3Ij-Wz-vDs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="CiV-Vi-p0D"/>
+                                    <constraint firstAttribute="height" constant="1024" id="ZRb-T9-2r4"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt4-WW-eya">
                                 <frame key="frameInset" minX="312" minY="180" width="115" height="30"/>
@@ -717,6 +749,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Ij-Wz-vDs" firstAttribute="centerY" secondItem="UDz-wl-IrR" secondAttribute="centerY" id="1oK-Wv-2G4"/>
+                            <constraint firstItem="3Ij-Wz-vDs" firstAttribute="top" secondItem="UDz-wl-IrR" secondAttribute="top" id="I4L-iu-VNb"/>
+                            <constraint firstAttribute="bottom" secondItem="3Ij-Wz-vDs" secondAttribute="bottom" id="P4P-cK-pFZ"/>
+                            <constraint firstItem="3Ij-Wz-vDs" firstAttribute="leading" secondItem="UDz-wl-IrR" secondAttribute="leading" id="dWF-Cc-bca"/>
+                            <constraint firstItem="3Ij-Wz-vDs" firstAttribute="centerX" secondItem="UDz-wl-IrR" secondAttribute="centerX" id="kbt-V8-FnN"/>
+                            <constraint firstAttribute="trailing" secondItem="3Ij-Wz-vDs" secondAttribute="trailing" id="s02-wr-3vF"/>
+                        </constraints>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -753,6 +793,6 @@
         <segue reference="3HF-6p-xKx"/>
         <segue reference="hQE-SN-aYG"/>
         <segue reference="1Kb-L2-4Aq"/>
-        <segue reference="b9t-V0-E3y"/>
+        <segue reference="w5M-J0-rfp"/>
     </inferredMetricsTieBreakers>
 </document>
