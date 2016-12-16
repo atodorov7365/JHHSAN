@@ -171,13 +171,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHG-Dm-QWH">
-                                <frame key="frameInset" minX="-1" height="44" maxX="1"/>
+                                <frame key="frameInset" minX="-2" height="44" maxX="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="RpH-cH-mOG">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="VHV-Lu-ApT">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="gvN-ut-10l"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="I5x-Ng-A1O"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -546,7 +546,7 @@
                                     <navigationItem id="Ddk-qm-zhz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Hrz-N1-qCd">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="gwV-ba-pYn"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="iMK-aS-akb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -595,7 +595,7 @@
                                     <navigationItem id="MaF-mA-av8">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="9Y0-yg-Wwp">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="lEz-ZJ-x80"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="gd5-zR-hk4"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -636,7 +636,7 @@
                                     <navigationItem id="Aea-Hq-R5e">
                                         <barButtonItem key="leftBarButtonItem" title="Done" id="4ec-gn-Rv1">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="UVv-3F-5y8"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="w5M-J0-rfp"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -685,7 +685,7 @@
                                         <barButtonItem key="backBarButtonItem" title="Back" id="Dz6-Kj-BbQ"/>
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="XnP-sd-t2c">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="Hei-gC-Cb8"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="b9t-V0-E3y"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -748,11 +748,11 @@
         <image name="icon-menu" width="29" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Kb-L2-4Aq"/>
         <segue reference="KGi-tR-A6R"/>
         <segue reference="ac4-74-YCn"/>
-        <segue reference="hQE-SN-aYG"/>
         <segue reference="3HF-6p-xKx"/>
-        <segue reference="UVv-3F-5y8"/>
+        <segue reference="hQE-SN-aYG"/>
+        <segue reference="1Kb-L2-4Aq"/>
+        <segue reference="b9t-V0-E3y"/>
     </inferredMetricsTieBreakers>
 </document>

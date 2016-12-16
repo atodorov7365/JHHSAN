@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         Open.target = self.revealViewController()
         //Open.action = #selector(SWRevealViewController.revealToggle(_:))
         Open.action = Selector("revealToggle:")
-//        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         
         Thread.sleep(forTimeInterval: 1)
