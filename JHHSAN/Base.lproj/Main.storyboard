@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,30 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-UU-8Fa"/>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88T-2j-3tG" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <color key="backgroundColor" red="0.97583097219467163" green="0.44067798886882648" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YM-ZC-ior">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="502" id="Dk2-si-ouW"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YM-ZC-ior">
+                                <frame key="frameInset" minX="133" minY="72" width="502" height="89"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.29803921570000003" green="0.58039215690000001" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88T-2j-3tG" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <color key="backgroundColor" red="0.97583097219467163" green="0.44067798886882648" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0st-bG-rU8"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="88T-2j-3tG" secondAttribute="bottom" constant="398" id="8IO-S9-WD2"/>
-                            <constraint firstItem="3YM-ZC-ior" firstAttribute="centerX" secondItem="88T-2j-3tG" secondAttribute="centerX" id="Ano-CA-2ul"/>
-                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="J4j-gJ-MoV"/>
-                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="centerX" secondItem="88T-2j-3tG" secondAttribute="centerX" id="JVz-OX-Gyz"/>
-                            <constraint firstAttribute="trailing" secondItem="C1A-UU-8Fa" secondAttribute="trailing" id="LoC-Hx-3eY"/>
-                            <constraint firstItem="88T-2j-3tG" firstAttribute="top" secondItem="3YM-ZC-ior" secondAttribute="bottom" constant="8" symbolic="YES" id="Quh-VM-i25"/>
-                            <constraint firstItem="88T-2j-3tG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="133" id="ksI-Qc-zth"/>
-                            <constraint firstAttribute="bottom" secondItem="C1A-UU-8Fa" secondAttribute="bottom" id="ncI-ri-Hd7"/>
-                            <constraint firstItem="3YM-ZC-ior" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="44" id="qiX-Wk-6fj"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="top" secondItem="3YM-ZC-ior" secondAttribute="bottom" constant="8" symbolic="YES" id="1B4-3H-N06"/>
+                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1qk-Am-uxl"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="169" id="Bde-ve-xdP"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="133" id="WNP-ei-wef"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="centerX" secondItem="C1A-UU-8Fa" secondAttribute="centerX" id="arA-7X-IPU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="88T-2j-3tG" secondAttribute="bottom" constant="305" id="dIZ-G8-SqC"/>
+                            <constraint firstAttribute="trailing" secondItem="C1A-UU-8Fa" secondAttribute="trailing" id="eno-5i-qzX"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="trailing" secondItem="3YM-ZC-ior" secondAttribute="trailing" id="f2x-dL-gAq"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="leading" secondItem="3YM-ZC-ior" secondAttribute="leading" id="u4s-5R-Iy8"/>
+                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vpE-E6-WYn"/>
+                            <constraint firstAttribute="bottom" secondItem="C1A-UU-8Fa" secondAttribute="bottom" id="xbY-fr-VGE"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -92,55 +90,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Schedule" id="eID-C5-WlP">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Schedule" rowHeight="100" id="eID-C5-WlP">
+                                <rect key="frame" x="0.0" y="28" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
-                                    <frame key="frameInset" width="768" height="44"/>
+                                    <frame key="frameInset" width="768" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="ngV-vM-h6v" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="eNC-ij-Kx2"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Website" id="mAQ-Nx-oTx">
-                                <rect key="frame" x="0.0" y="72" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Website" rowHeight="115" id="mAQ-Nx-oTx">
+                                <rect key="frame" x="0.0" y="128" width="768" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAQ-Nx-oTx" id="rd4-ik-14s">
-                                    <frame key="frameInset" width="768" height="44"/>
+                                    <frame key="frameInset" width="768" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="VbX-MZ-7Tq" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="Rqc-3h-Y9W"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Map" id="9t7-Rw-fql">
-                                <rect key="frame" x="0.0" y="116" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Map" rowHeight="100" id="9t7-Rw-fql">
+                                <rect key="frame" x="0.0" y="243" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9t7-Rw-fql" id="xUV-DN-7eC">
-                                    <frame key="frameInset" width="768" height="44"/>
+                                    <frame key="frameInset" width="768" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="JBU-pl-mBU" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="eYO-4D-vGD"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Handbook" id="0CA-M9-0HM">
-                                <rect key="frame" x="0.0" y="160" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Handbook" rowHeight="103" id="0CA-M9-0HM">
+                                <rect key="frame" x="0.0" y="343" width="768" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CA-M9-0HM" id="HLo-HM-iLu">
-                                    <frame key="frameInset" width="768" height="44"/>
+                                    <frame key="frameInset" width="768" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="7v3-Ve-kQG" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="7SM-nz-ZO0"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Mapstuff" id="Y68-tD-OZU">
-                                <rect key="frame" x="0.0" y="204" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Mapstuff" rowHeight="94" id="Y68-tD-OZU">
+                                <rect key="frame" x="0.0" y="446" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y68-tD-OZU" id="ywX-E3-Qqz">
-                                    <frame key="frameInset" width="768" height="44"/>
+                                    <frame key="frameInset" width="768" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -156,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tty-dx-sBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821" y="-536"/>
+            <point key="canvasLocation" x="820.3125" y="-536.1328125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jhu-Gd-hID">
@@ -513,7 +511,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-rN-CR3">
-                                <frame key="frameInset" minX="-7" height="44" maxX="5"/>
+                                <frame key="frameInset" minX="-8" height="44" maxX="7"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="Xkd-Eg-JMw">
@@ -710,7 +708,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-aJ-JcK">
-                                <frame key="frameInset" height="44" maxX="4"/>
+                                <frame key="frameInset" height="44" maxX="5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="1ha-SG-paV">
@@ -788,11 +786,11 @@
         <image name="icon-menu" width="29" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KGi-tR-A6R"/>
-        <segue reference="ac4-74-YCn"/>
-        <segue reference="3HF-6p-xKx"/>
-        <segue reference="hQE-SN-aYG"/>
-        <segue reference="1Kb-L2-4Aq"/>
+        <segue reference="eNC-ij-Kx2"/>
         <segue reference="w5M-J0-rfp"/>
+        <segue reference="eYO-4D-vGD"/>
+        <segue reference="7SM-nz-ZO0"/>
+        <segue reference="Rqc-3h-Y9W"/>
+        <segue reference="1Kb-L2-4Aq"/>
     </inferredMetricsTieBreakers>
 </document>
