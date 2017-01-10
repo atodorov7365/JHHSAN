@@ -18,7 +18,7 @@ class HerseyHandbookViewController: UIViewController {
         {
             UIApplication.shared.open(url!, options: [:], completionHandler: nil)
         }
-
+        
         
     }
     @IBAction func toHerseyParentHandbook(_ sender: UIButton) {
@@ -27,15 +27,15 @@ class HerseyHandbookViewController: UIViewController {
         if UIApplication.shared.canOpenURL(url!)
         {
             UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        }
+        
+        func viewDidLoad() {
+            super.viewDidLoad()
+            
+        }
+        
+        
+        
+        
     }
-
-    func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
-
-
-   
-}
 }

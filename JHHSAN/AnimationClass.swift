@@ -8,9 +8,9 @@
 
 import UIKit
 class AnimationClass {
-
+    
     class func BounceEffect() -> (UIView, @escaping (Bool) -> Void) -> () {
-
+        
         return {
             view, completion in
             view.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
@@ -25,11 +25,11 @@ class AnimationClass {
                 completion: completion
             )
         }
-
+        
     }
-
+    
     class func fadeOutEffect() -> (UIView, @escaping (Bool) -> Void) -> () {
-
+        
         return {
             view, completion in
             UIView.animate(withDuration: 0.6,
@@ -37,22 +37,22 @@ class AnimationClass {
                            initialSpringVelocity: 0,
                            options: [],
                            animations: {
-                                view.alpha = 0
-                            },
+                            view.alpha = 0
+                },
                            completion: completion)
         }
-
+        
     }
-
+    
     fileprivate class func get3DTransformation(_ angle: Double) ->
-                                                            CATransform3D {
-        var transform = CATransform3DIdentity
-        transform.m34 = -1.0 / 500.0
-        transform = CATransform3DRotate(transform,
-                                CGFloat(angle * M_PI / 180.0), 0, 1, 0.0)
-        return transform
+        CATransform3D {
+            var transform = CATransform3DIdentity
+            transform.m34 = -1.0 / 500.0
+            transform = CATransform3DRotate(transform,
+                                            CGFloat(angle * M_PI / 180.0), 0, 1, 0.0)
+            return transform
     }
-
+    
     class func flipAnimation(_ view: UIView, completion: (() -> Void)?) {
         let angle = 180.0
         view.layer.transform = get3DTransformation(angle)
@@ -62,10 +62,10 @@ class AnimationClass {
                        initialSpringVelocity: 0,
                        options: [],
                        animations: { () -> Void in
-                            view.layer.transform = CATransform3DIdentity
-                        }) { (finished) -> Void in
-                            completion?()
+                        view.layer.transform = CATransform3DIdentity
+        }) { (finished) -> Void in
+            completion?()
         }
     }
-
+    
 }

@@ -1,4 +1,4 @@
-//
+//  
 //  ViewController.swift
 //  JHHSAN
 //
@@ -47,12 +47,12 @@ class ViewController: UIViewController {
         calendar.timeZone = TimeZone(secondsFromGMT: 0)!
         
         //Setting up your dataSource and delegate is manditory
-
+        
         calendarView.delegate = self
         calendarView.dataSource = self
         
         calendarView.registerCellViewXib(file: "CellView")
-
+        
         calendarView.registerHeaderView(xibFileNames: ["SectionHeaderView1"])
         
         
@@ -170,7 +170,7 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
         let customCell = cell as! CellView
-
+        
         (cell as? CellView)?.cellSelectionChanged(cellState)
         
         
@@ -208,8 +208,8 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
     }
     
     func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
-            return CGSize(width: 200, height: 50)
-
+        return CGSize(width: 200, height: 50)
+        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplaySectionHeader header: JTAppleHeaderView, range: (start: Date, end: Date), identifier: String) {

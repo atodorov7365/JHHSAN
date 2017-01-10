@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U4h-TG-yvI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U4h-TG-yvI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
@@ -94,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
-                                    <frame key="frameInset" width="768" height="100"/>
+                                    <frame key="frameInset" width="768" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -105,7 +105,7 @@
                                 <rect key="frame" x="0.0" y="128" width="768" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAQ-Nx-oTx" id="rd4-ik-14s">
-                                    <frame key="frameInset" width="768" height="115"/>
+                                    <frame key="frameInset" width="768" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -116,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="243" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9t7-Rw-fql" id="xUV-DN-7eC">
-                                    <frame key="frameInset" width="768" height="100"/>
+                                    <frame key="frameInset" width="768" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -127,7 +127,7 @@
                                 <rect key="frame" x="0.0" y="343" width="768" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CA-M9-0HM" id="HLo-HM-iLu">
-                                    <frame key="frameInset" width="768" height="103"/>
+                                    <frame key="frameInset" width="768" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -138,7 +138,7 @@
                                 <rect key="frame" x="0.0" y="446" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y68-tD-OZU" id="ywX-E3-Qqz">
-                                    <frame key="frameInset" width="768" height="94"/>
+                                    <frame key="frameInset" width="768" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -511,7 +511,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-rN-CR3">
-                                <frame key="frameInset" minX="-8" height="44" maxX="7"/>
+                                <frame key="frameInset" minX="-9" height="44" maxX="8"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="Xkd-Eg-JMw">
@@ -613,7 +613,7 @@
                                 </constraints>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sov-Sq-pgu">
-                                <frame key="frameInset" minX="-4" height="44"/>
+                                <frame key="frameInset" minX="-4" height="44" maxX="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="MaF-mA-av8">
@@ -679,7 +679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmr-KR-kUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551.5625" y="899.99999999999989"/>
+            <point key="canvasLocation" x="1552" y="834"/>
         </scene>
         <!--Safari View Controller-->
         <scene sceneID="wad-IC-eGa">
@@ -708,7 +708,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-aJ-JcK">
-                                <frame key="frameInset" height="44" maxX="5"/>
+                                <frame key="frameInset" height="44" maxX="4"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="1ha-SG-paV">
@@ -786,10 +786,10 @@
         <image name="icon-menu" width="29" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eNC-ij-Kx2"/>
-        <segue reference="w5M-J0-rfp"/>
-        <segue reference="eYO-4D-vGD"/>
+        <segue reference="iMK-aS-akb"/>
         <segue reference="7SM-nz-ZO0"/>
+        <segue reference="eYO-4D-vGD"/>
+        <segue reference="eNC-ij-Kx2"/>
         <segue reference="Rqc-3h-Y9W"/>
         <segue reference="1Kb-L2-4Aq"/>
     </inferredMetricsTieBreakers>
