@@ -17,16 +17,20 @@ class CellView: JTAppleDayCellView {
     let textSelectedColor = UIColor.white
     let textDeselectedColor = UIColor.black
     let previousMonthTextColor = UIColor.gray
+    
     lazy var todayDate: String = {
         [weak self] in
         let aString = self!.cal.string(from: Date())
         return aString
     }()
+    
+    
     lazy var cal: DateFormatter = {
         let fmtter = DateFormatter()
         fmtter.dateFormat = "yyyy-MM-dd"
         return fmtter
     }()
+    
     func setupCellBeforeDisplay(_ cellState: CellState, date: Date) {
         // Setup Cell text
         
@@ -34,8 +38,12 @@ class CellView: JTAppleDayCellView {
         
         // Setup text color
         configureTextColor(cellState)
+        
         // Setup Cell Background color
-        self.backgroundColor = cal.string(from: date) == todayDate ? todayColor:normalDayColor
+        if cal.string(from: date) == todayDate {
+            self.backgroundColor = todayColor
+        }
+        
         // Setup cell selection status
 //        delayRunOnMainThread(0.0) {
             self.configueViewIntoBubbleView(cellState)
