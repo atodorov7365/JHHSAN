@@ -9,6 +9,7 @@
 
 import JTAppleCalendar
 
+
 class CellView: JTAppleDayCellView {
     @IBInspectable var todayColor: UIColor!
     @IBInspectable var normalDayColor: UIColor!
