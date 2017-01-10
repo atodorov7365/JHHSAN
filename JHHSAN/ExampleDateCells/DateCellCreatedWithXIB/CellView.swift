@@ -48,93 +48,93 @@ class CellView: JTAppleDayCellView {
         // Setup cell selection status
 //        delayRunOnMainThread(0.0) {
             self.configueViewIntoBubbleView(cellState)
-//        }
-        // Configure Visibility
-        configureVisibility(cellState)
-        // With cell states you can literally control every aspect of the calendar view
-        // Uncomment this code block to watch "JTAPPLE" spelt on the calendar
-
-    }
-    func configureVisibility(_ cellState: CellState) {
-        if
-            cellState.dateBelongsTo == .thisMonth ||
-            cellState.dateBelongsTo == .previousMonthWithinBoundary ||
-            cellState.dateBelongsTo == .followingMonthWithinBoundary {
-            self.isHidden = false
-        } else {
-            self.isHidden = false
+            //        }
+            // Configure Visibility
+            configureVisibility(cellState)
+            // With cell states you can literally control every aspect of the calendar view
+            // Uncomment this code block to watch "JTAPPLE" spelt on the calendar
+            
+        }
+        func configureVisibility(_ cellState: CellState) {
+            if
+                cellState.dateBelongsTo == .thisMonth ||
+                    cellState.dateBelongsTo == .previousMonthWithinBoundary ||
+                    cellState.dateBelongsTo == .followingMonthWithinBoundary {
+                self.isHidden = false
+            } else {
+                self.isHidden = false
+                
+            }
+        }
+        func configureTextColor(_ cellState: CellState) {
+            if cellState.isSelected {
+                dayLabel.textColor = textSelectedColor
+            } else if cellState.dateBelongsTo == .thisMonth {
+                dayLabel.textColor = textDeselectedColor
+            } else {
+                dayLabel.textColor = previousMonthTextColor
+            }
+        }
+        func cellSelectionChanged(_ cellState: CellState) {
+            if cellState.isSelected == true {
+                if selectedView.isHidden == true {
+                    configueViewIntoBubbleView(cellState)
+                    //                selectedView.animateWithBounceEffect(withCompletionHandler: {
+                    //                })
+                }
+            } else {
+                configueViewIntoBubbleView(cellState, animateDeselection: true)
+            }
+        }
+        fileprivate func configueViewIntoBubbleView(_ cellState: CellState, animateDeselection: Bool = false) {
+            if cellState.isSelected {
+                //            self.selectedView.layer.cornerRadius =  self.selectedView.frame.width  / 2
+                self.selectedView.isHidden = false
+                configureTextColor(cellState)
+            } else {
+                if animateDeselection {
+                    configureTextColor(cellState)
+                    if selectedView.isHidden == false {
+                        //                    selectedView.animateWithFadeEffect(withCompletionHandler: { () -> Void in
+                        self.selectedView.isHidden = true
+                        //                        self.selectedView.alpha = 1
+                        //                    })
+                    }
+                } else {
+                    selectedView.isHidden = true
+                }
+            }
+            
+            
             
         }
     }
-    func configureTextColor(_ cellState: CellState) {
-        if cellState.isSelected {
-            dayLabel.textColor = textSelectedColor
-        } else if cellState.dateBelongsTo == .thisMonth {
-            dayLabel.textColor = textDeselectedColor
-        } else {
-            dayLabel.textColor = previousMonthTextColor
+    
+    class AnimationView: UIView {
+        func animateWithFlipEffect(withCompletionHandler completionHandler:(() -> Void)?) {
+            AnimationClass.flipAnimation(self, completion: completionHandler)
         }
-    }
-    func cellSelectionChanged(_ cellState: CellState) {
-        if cellState.isSelected == true {
-            if selectedView.isHidden == true {
-                configueViewIntoBubbleView(cellState)
-//                selectedView.animateWithBounceEffect(withCompletionHandler: {
-//                })
-            }
-        } else {
-            configueViewIntoBubbleView(cellState, animateDeselection: true)
-        }
-    }
-    fileprivate func configueViewIntoBubbleView(_ cellState: CellState, animateDeselection: Bool = false) {
-        if cellState.isSelected {
-//            self.selectedView.layer.cornerRadius =  self.selectedView.frame.width  / 2
-            self.selectedView.isHidden = false
-            configureTextColor(cellState)
-        } else {
-            if animateDeselection {
-                configureTextColor(cellState)
-                if selectedView.isHidden == false {
-//                    selectedView.animateWithFadeEffect(withCompletionHandler: { () -> Void in
-                        self.selectedView.isHidden = true
-//                        self.selectedView.alpha = 1
-//                    })
-                }
-            } else {
-                selectedView.isHidden = true
+        func animateWithBounceEffect(withCompletionHandler completionHandler:(() -> Void)?) {
+            let viewAnimation = AnimationClass.BounceEffect()
+            viewAnimation(self) { _ in
+                completionHandler?()
             }
         }
-        
-
-        
-    }
-}
-
-class AnimationView: UIView {
-    func animateWithFlipEffect(withCompletionHandler completionHandler:(() -> Void)?) {
-        AnimationClass.flipAnimation(self, completion: completionHandler)
-    }
-    func animateWithBounceEffect(withCompletionHandler completionHandler:(() -> Void)?) {
-        let viewAnimation = AnimationClass.BounceEffect()
-        viewAnimation(self) { _ in
-            completionHandler?()
+        func animateWithFadeEffect(withCompletionHandler completionHandler:(() -> Void)?) {
+            let viewAnimation = AnimationClass.fadeOutEffect()
+            viewAnimation(self) { _ in
+                completionHandler?()
+            }
         }
     }
-    func animateWithFadeEffect(withCompletionHandler completionHandler:(() -> Void)?) {
-        let viewAnimation = AnimationClass.fadeOutEffect()
-        viewAnimation(self) { _ in
-            completionHandler?()
+    
+    extension UIColor {
+        convenience init(colorWithHexValue value: Int, alpha:CGFloat = 1.0){
+            self.init(
+                red: CGFloat((value & 0xFF0000) >> 16) / 255.0,
+                green: CGFloat((value & 0x00FF00) >> 8) / 255.0,
+                blue: CGFloat(value & 0x0000FF) / 255.0,
+                alpha: alpha
+            )
         }
     }
-}
-
-extension UIColor {
-    convenience init(colorWithHexValue value: Int, alpha:CGFloat = 1.0){
-        self.init(
-            red: CGFloat((value & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((value & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(value & 0x0000FF) / 255.0,
-            alpha: alpha
-        )
-    }
-}

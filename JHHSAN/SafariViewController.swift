@@ -24,7 +24,6 @@ class SafariViewController: UIViewController, SFSafariViewControllerDelegate {
         let url = NSURL(string: urlString)!
         UIApplication.shared.openURL(url as URL)
         //hersey activites
-        //  (//:) = app
     }
     @IBAction func infiniteCampus(_ sender: UIButton) {
         let url = NSURL(string: urlStringInfiniteCampus)!
@@ -40,5 +39,5 @@ class SafariViewController: UIViewController, SFSafariViewControllerDelegate {
         let url = NSURL(string: urlStringMoodle)!
         UIApplication.shared.openURL(url as URL)
     }
-    
 }
+

@@ -1,4 +1,4 @@
-//
+//  
 //  ViewController.swift
 //  JHHSAN
 //
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         Open.target = self.revealViewController()
         //Open.action = #selector(SWRevealViewController.revealToggle(_:))
         Open.action = Selector("revealToggle:")
-//        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         
         Thread.sleep(forTimeInterval: 1)
@@ -48,12 +48,12 @@ class ViewController: UIViewController {
         calendar.timeZone = TimeZone(secondsFromGMT: 0)!
         
         //Setting up your dataSource and delegate is manditory
-
+        
         calendarView.delegate = self
         calendarView.dataSource = self
         
         calendarView.registerCellViewXib(file: "CellView")
-
+        
         calendarView.registerHeaderView(xibFileNames: ["SectionHeaderView1"])
         
         
@@ -228,8 +228,8 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
     }
     
     func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
-            return CGSize(width: 200, height: 50)
-
+        return CGSize(width: 200, height: 50)
+        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplaySectionHeader header: JTAppleHeaderView, range: (start: Date, end: Date), identifier: String) {

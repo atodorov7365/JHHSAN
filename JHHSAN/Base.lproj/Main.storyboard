@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U4h-TG-yvI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U4h-TG-yvI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,30 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="C1A-UU-8Fa"/>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88T-2j-3tG" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <color key="backgroundColor" red="0.97583097219467163" green="0.44067798886882648" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YM-ZC-ior">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="502" id="Dk2-si-ouW"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YM-ZC-ior">
+                                <frame key="frameInset" minX="133" minY="72" width="502" height="89"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.29803921570000003" green="0.58039215690000001" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88T-2j-3tG" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <color key="backgroundColor" red="0.97583097219467163" green="0.44067798886882648" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0st-bG-rU8"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="88T-2j-3tG" secondAttribute="bottom" constant="398" id="8IO-S9-WD2"/>
-                            <constraint firstItem="3YM-ZC-ior" firstAttribute="centerX" secondItem="88T-2j-3tG" secondAttribute="centerX" id="Ano-CA-2ul"/>
-                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="J4j-gJ-MoV"/>
-                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="centerX" secondItem="88T-2j-3tG" secondAttribute="centerX" id="JVz-OX-Gyz"/>
-                            <constraint firstAttribute="trailing" secondItem="C1A-UU-8Fa" secondAttribute="trailing" id="LoC-Hx-3eY"/>
-                            <constraint firstItem="88T-2j-3tG" firstAttribute="top" secondItem="3YM-ZC-ior" secondAttribute="bottom" constant="8" symbolic="YES" id="Quh-VM-i25"/>
-                            <constraint firstItem="88T-2j-3tG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="133" id="ksI-Qc-zth"/>
-                            <constraint firstAttribute="bottom" secondItem="C1A-UU-8Fa" secondAttribute="bottom" id="ncI-ri-Hd7"/>
-                            <constraint firstItem="3YM-ZC-ior" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="44" id="qiX-Wk-6fj"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="top" secondItem="3YM-ZC-ior" secondAttribute="bottom" constant="8" symbolic="YES" id="1B4-3H-N06"/>
+                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1qk-Am-uxl"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="169" id="Bde-ve-xdP"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="133" id="WNP-ei-wef"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="centerX" secondItem="C1A-UU-8Fa" secondAttribute="centerX" id="arA-7X-IPU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="88T-2j-3tG" secondAttribute="bottom" constant="305" id="dIZ-G8-SqC"/>
+                            <constraint firstAttribute="trailing" secondItem="C1A-UU-8Fa" secondAttribute="trailing" id="eno-5i-qzX"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="trailing" secondItem="3YM-ZC-ior" secondAttribute="trailing" id="f2x-dL-gAq"/>
+                            <constraint firstItem="88T-2j-3tG" firstAttribute="leading" secondItem="3YM-ZC-ior" secondAttribute="leading" id="u4s-5R-Iy8"/>
+                            <constraint firstItem="C1A-UU-8Fa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vpE-E6-WYn"/>
+                            <constraint firstAttribute="bottom" secondItem="C1A-UU-8Fa" secondAttribute="bottom" id="xbY-fr-VGE"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -92,55 +90,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Schedule" id="eID-C5-WlP">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Schedule" rowHeight="100" id="eID-C5-WlP">
+                                <rect key="frame" x="0.0" y="28" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="ngV-vM-h6v" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="eNC-ij-Kx2"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Website" id="mAQ-Nx-oTx">
-                                <rect key="frame" x="0.0" y="72" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Website" rowHeight="115" id="mAQ-Nx-oTx">
+                                <rect key="frame" x="0.0" y="128" width="768" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAQ-Nx-oTx" id="rd4-ik-14s">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="VbX-MZ-7Tq" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="Rqc-3h-Y9W"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Map" id="9t7-Rw-fql">
-                                <rect key="frame" x="0.0" y="116" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Map" rowHeight="100" id="9t7-Rw-fql">
+                                <rect key="frame" x="0.0" y="243" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9t7-Rw-fql" id="xUV-DN-7eC">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="JBU-pl-mBU" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="eYO-4D-vGD"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Handbook" id="0CA-M9-0HM">
-                                <rect key="frame" x="0.0" y="160" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Handbook" rowHeight="103" id="0CA-M9-0HM">
+                                <rect key="frame" x="0.0" y="343" width="768" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CA-M9-0HM" id="HLo-HM-iLu">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="7v3-Ve-kQG" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="7SM-nz-ZO0"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Mapstuff" id="Y68-tD-OZU">
-                                <rect key="frame" x="0.0" y="204" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Mapstuff" rowHeight="94" id="Y68-tD-OZU">
+                                <rect key="frame" x="0.0" y="446" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y68-tD-OZU" id="ywX-E3-Qqz">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -156,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tty-dx-sBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821" y="-536"/>
+            <point key="canvasLocation" x="820.3125" y="-536.1328125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jhu-Gd-hID">
@@ -170,23 +168,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="c96-He-9Tj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="AwO-2r-fhD"/>
+                                    <constraint firstAttribute="height" constant="1024" id="pGE-kf-i6q"/>
+                                </constraints>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHG-Dm-QWH">
-                                <frame key="frameInset" minX="-1" height="44" maxX="1"/>
+                                <frame key="frameInset" minX="-2" height="44" maxX="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="RpH-cH-mOG">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="VHV-Lu-ApT">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="gvN-ut-10l"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="I5x-Ng-A1O"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="c96-He-9Tj">
-                                <frame key="frameInset" minY="44" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REGULAR SCHEDULE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHX-ZU-R8Y">
                                 <frame key="frameInset" minX="20" minY="105" width="168" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -448,11 +448,19 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c96-He-9Tj" firstAttribute="leading" secondItem="bgh-jk-WQJ" secondAttribute="leading" id="13u-bX-kzW"/>
+                            <constraint firstItem="cew-y9-YNe" firstAttribute="top" secondItem="c96-He-9Tj" secondAttribute="bottom" id="6RG-s7-GaE"/>
+                            <constraint firstItem="c96-He-9Tj" firstAttribute="centerY" secondItem="bgh-jk-WQJ" secondAttribute="centerY" id="Quo-Vk-p61"/>
+                            <constraint firstItem="c96-He-9Tj" firstAttribute="centerX" secondItem="bgh-jk-WQJ" secondAttribute="centerX" id="bGf-O3-wSd"/>
+                            <constraint firstAttribute="trailing" secondItem="c96-He-9Tj" secondAttribute="trailing" id="fTg-Xr-W6G"/>
+                            <constraint firstItem="c96-He-9Tj" firstAttribute="top" secondItem="bgh-jk-WQJ" secondAttribute="top" id="ipB-nY-TXp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8w-H4-7fj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552" y="-536"/>
+            <point key="canvasLocation" x="1551.5625" y="-536.1328125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0ke-Xs-QMm">
@@ -503,7 +511,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-rN-CR3">
-                                <frame key="frameInset" minX="-7" height="44" maxX="5"/>
+                                <frame key="frameInset" minX="-9" height="44" maxX="8"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="Xkd-Eg-JMw">
@@ -535,9 +543,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="tp7-9Q-NRf">
-                                <frame key="frameInset" minY="44" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="tp7-9Q-NRf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1024" id="hiD-qA-Qgc"/>
+                                    <constraint firstAttribute="width" constant="768" id="jvB-un-6Kn"/>
+                                </constraints>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0Q-hS-gDa">
                                 <frame key="frameInset" minX="-7" height="44" maxX="4"/>
@@ -546,7 +556,7 @@
                                     <navigationItem id="Ddk-qm-zhz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Hrz-N1-qCd">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="gwV-ba-pYn"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="iMK-aS-akb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -570,6 +580,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tp7-9Q-NRf" firstAttribute="centerX" secondItem="raN-n2-fsq" secondAttribute="centerX" id="47N-Z2-mnA"/>
+                            <constraint firstItem="tp7-9Q-NRf" firstAttribute="centerY" secondItem="raN-n2-fsq" secondAttribute="centerY" id="GYN-9A-3GX"/>
+                            <constraint firstItem="tp7-9Q-NRf" firstAttribute="leading" secondItem="raN-n2-fsq" secondAttribute="leading" id="VI3-gM-rQU"/>
+                            <constraint firstItem="zMd-2a-RQ2" firstAttribute="top" secondItem="tp7-9Q-NRf" secondAttribute="bottom" id="Vvu-gi-bSt"/>
+                            <constraint firstItem="tp7-9Q-NRf" firstAttribute="top" secondItem="raN-n2-fsq" secondAttribute="top" id="far-ei-JMw"/>
+                            <constraint firstAttribute="trailing" secondItem="tp7-9Q-NRf" secondAttribute="trailing" id="wH5-mg-M3Z"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjE-TY-k3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -588,25 +606,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-lp-rId">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1024" id="G2l-ss-mJv"/>
+                                    <constraint firstAttribute="width" constant="768" id="lRm-YH-UmI"/>
+                                </constraints>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sov-Sq-pgu">
-                                <frame key="frameInset" minX="-4" height="44" maxX="6"/>
+                                <frame key="frameInset" minX="-4" height="44" maxX="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="MaF-mA-av8">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="9Y0-yg-Wwp">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="lEz-ZJ-x80"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="gd5-zR-hk4"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-lp-rId">
-                                <frame key="frameInset" minY="44" width="766" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Emj-lp-rId" secondAttribute="trailing" id="Q6Z-BG-6QY"/>
+                            <constraint firstItem="Emj-lp-rId" firstAttribute="centerX" secondItem="Ey3-Cp-8bK" secondAttribute="centerX" id="cXG-o6-BuB"/>
+                            <constraint firstItem="Emj-lp-rId" firstAttribute="top" secondItem="Ey3-Cp-8bK" secondAttribute="top" id="d0W-QS-mHb"/>
+                            <constraint firstItem="IFk-YO-XoN" firstAttribute="top" secondItem="Emj-lp-rId" secondAttribute="bottom" id="tUp-Bx-sYf"/>
+                            <constraint firstItem="Emj-lp-rId" firstAttribute="leading" secondItem="Ey3-Cp-8bK" secondAttribute="leading" id="wHU-1J-Ytf"/>
+                            <constraint firstItem="Emj-lp-rId" firstAttribute="centerY" secondItem="Ey3-Cp-8bK" secondAttribute="centerY" id="wtN-Sg-sjE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSk-C0-god" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -626,9 +654,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-7z-5Gw">
-                                <frame key="frameInset" width="1027" height="1372"/>
+                                <frame key="frameInset" minY="44" width="1027" height="1328"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNL-is-bpF">
+                                <frame key="frameInset" height="44" maxX="-2"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Aea-Hq-R5e">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="4ec-gn-Rv1">
+                                            <connections>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="w5M-J0-rfp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -638,7 +679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmr-KR-kUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551.5625" y="899.99999999999989"/>
+            <point key="canvasLocation" x="1552" y="834"/>
         </scene>
         <!--Safari View Controller-->
         <scene sceneID="wad-IC-eGa">
@@ -652,9 +693,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="3Ij-Wz-vDs">
-                                <frame key="frameInset" minY="44" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="3Ij-Wz-vDs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="CiV-Vi-p0D"/>
+                                    <constraint firstAttribute="height" constant="1024" id="ZRb-T9-2r4"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt4-WW-eya">
                                 <frame key="frameInset" minX="312" minY="180" width="115" height="30"/>
@@ -672,7 +715,7 @@
                                         <barButtonItem key="backBarButtonItem" title="Back" id="Dz6-Kj-BbQ"/>
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="XnP-sd-t2c">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="Hei-gC-Cb8"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" id="b9t-V0-E3y"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -704,6 +747,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Ij-Wz-vDs" firstAttribute="centerY" secondItem="UDz-wl-IrR" secondAttribute="centerY" id="1oK-Wv-2G4"/>
+                            <constraint firstItem="3Ij-Wz-vDs" firstAttribute="top" secondItem="UDz-wl-IrR" secondAttribute="top" id="I4L-iu-VNb"/>
+                            <constraint firstAttribute="bottom" secondItem="3Ij-Wz-vDs" secondAttribute="bottom" id="P4P-cK-pFZ"/>
+                            <constraint firstItem="3Ij-Wz-vDs" firstAttribute="leading" secondItem="UDz-wl-IrR" secondAttribute="leading" id="dWF-Cc-bca"/>
+                            <constraint firstItem="3Ij-Wz-vDs" firstAttribute="centerX" secondItem="UDz-wl-IrR" secondAttribute="centerX" id="kbt-V8-FnN"/>
+                            <constraint firstAttribute="trailing" secondItem="3Ij-Wz-vDs" secondAttribute="trailing" id="s02-wr-3vF"/>
+                        </constraints>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -735,11 +786,11 @@
         <image name="icon-menu" width="29" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYO-4D-vGD"/>
-        <segue reference="Rqc-3h-Y9W"/>
-        <segue reference="eNC-ij-Kx2"/>
+        <segue reference="iMK-aS-akb"/>
         <segue reference="7SM-nz-ZO0"/>
-        <segue reference="lEz-ZJ-x80"/>
+        <segue reference="eYO-4D-vGD"/>
+        <segue reference="eNC-ij-Kx2"/>
+        <segue reference="Rqc-3h-Y9W"/>
         <segue reference="1Kb-L2-4Aq"/>
     </inferredMetricsTieBreakers>
 </document>
