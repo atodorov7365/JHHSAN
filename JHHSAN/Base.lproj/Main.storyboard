@@ -175,7 +175,7 @@
                                 </constraints>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHG-Dm-QWH">
-                                <frame key="frameInset" minX="-2" height="44" maxX="2"/>
+                                <frame key="frameInset" minX="-2" height="44" maxX="3"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="RpH-cH-mOG">
@@ -613,7 +613,7 @@
                                 </constraints>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sov-Sq-pgu">
-                                <frame key="frameInset" minX="-4" height="44" maxX="2"/>
+                                <frame key="frameInset" minX="-7" height="44" maxX="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="MaF-mA-av8">
