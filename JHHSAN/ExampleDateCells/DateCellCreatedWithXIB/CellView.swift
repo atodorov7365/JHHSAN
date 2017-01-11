@@ -40,19 +40,21 @@ class CellView: JTAppleDayCellView {
         // Setup text color
         configureTextColor(cellState)
         
-        // Setup Cell Background color
-        if cal.string(from: date) == todayDate {
-            self.backgroundColor = todayColor
-        }
+        // Setup Cell Background color for today's color
+//        if self.cal.string(from: date) == self.todayDate {
+//            self.backgroundColor = self.todayColor
+//        } else {
+//            self.backgroundColor = self.normalDayColor
+//        }
+//        
         
         // Setup cell selection status
-//        delayRunOnMainThread(0.0) {
+
             self.configueViewIntoBubbleView(cellState)
             //        }
             // Configure Visibility
             configureVisibility(cellState)
-            // With cell states you can literally control every aspect of the calendar view
-            // Uncomment this code block to watch "JTAPPLE" spelt on the calendar
+
             
         }
         func configureVisibility(_ cellState: CellState) {
