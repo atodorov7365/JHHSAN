@@ -1,49 +1,60 @@
-    //
-    //  CellView.swift
-    //  testApplicationCalendar
-    //
-    //  Created by JayT on 2016-03-04.
-    //  Copyright © 2016 OS-Tech. All rights reserved.
-    //
+//
+//  CellView.swift
+//  testApplicationCalendar
+//
+//  Created by JayT on 2016-03-04.
+//  Copyright © 2016 OS-Tech. All rights reserved.
+//
+
+
+import JTAppleCalendar
+
+
+class CellView: JTAppleDayCellView {
+    @IBInspectable var todayColor: UIColor!
+    @IBInspectable var normalDayColor: UIColor!
+    @IBOutlet var selectedView: AnimationView!
+    @IBOutlet var dayLabel: UILabel!
+    let textSelectedColor = UIColor.white
+    let textDeselectedColor = UIColor.black
+    let previousMonthTextColor = UIColor.gray
+    
+    lazy var todayDate: String = {
+        [weak self] in
+        let aString = self!.cal.string(from: Date())
+        return aString
+    }()
     
     
-    import JTAppleCalendar
+    lazy var cal: DateFormatter = {
+        let fmtter = DateFormatter()
+        fmtter.dateFormat = "yyyy-MM-dd"
+        return fmtter
+    }()
     
-    class CellView: JTAppleDayCellView {
-        @IBInspectable var todayColor: UIColor!
-        @IBInspectable var normalDayColor: UIColor!
-        @IBOutlet var selectedView: AnimationView!
-        @IBOutlet var dayLabel: UILabel!
-        let textSelectedColor = UIColor.white
-        let textDeselectedColor = UIColor.black
-        let previousMonthTextColor = UIColor.gray
-        lazy var todayDate: String = {
-            [weak self] in
-            let aString = self!.cal.string(from: Date())
-            return aString
-            }()
-        lazy var cal: DateFormatter = {
-            let fmtter = DateFormatter()
-            fmtter.dateFormat = "yyyy-MM-dd"
-            return fmtter
-        }()
-        func setupCellBeforeDisplay(_ cellState: CellState, date: Date) {
-            // Setup Cell text
-            
-            dayLabel.text =  cellState.text
-            
-            // Setup text color
-            configureTextColor(cellState)
-            // Setup Cell Background color
-            self.backgroundColor = cal.string(from: date) == todayDate ? todayColor:normalDayColor
-            // Setup cell selection status
-            //        delayRunOnMainThread(0.0) {
+    func setupCellBeforeDisplay(_ cellState: CellState, date: Date) {
+        // Setup Cell text
+        
+        dayLabel.text =  cellState.text
+        
+        // Setup text color
+        configureTextColor(cellState)
+        
+        // Setup Cell Background color for today's color
+//        if self.cal.string(from: date) == self.todayDate {
+//            self.backgroundColor = self.todayColor
+//        } else {
+//            self.backgroundColor = self.normalDayColor
+//        }
+//        
+        
+        // Setup cell selection status
+
             self.configueViewIntoBubbleView(cellState)
             //        }
             // Configure Visibility
             configureVisibility(cellState)
-            // With cell states you can literally control every aspect of the calendar view
-            // Uncomment this code block to watch "JTAPPLE" spelt on the calendar
+
             
         }
         func configureVisibility(_ cellState: CellState) {

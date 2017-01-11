@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+    var addAssignmentButton = UIButton()
     
     var numberOfRows = 6
     let formatter = DateFormatter()
@@ -138,36 +139,6 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         customCell.normalDayColor = UIColor.white
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
-        (cell as? CellView)?.cellSelectionChanged(cellState)
-        
-        let customCell = cell as! CellView
-        
-        // Setup Cell text
-        customCell.dayLabel.text = cellState.text
-        
-        // Setup text color
-        if cellState.dateBelongsTo == .thisMonth {
-            customCell.dayLabel.textColor = thisMonthsDateColor
-        } else {
-            customCell.dayLabel.textColor = otherMonthsDateColor
-        }
-        
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        label.center = CGPoint(x: 160, y: 285)
-        label.textAlignment = .center
-        label.text = "I'm a test label"
-        
-        if calendar.selectedDates.count == 1 {
-            
-            self.view.addSubview(label)
-        }
-        else {
-            label.removeFromSuperview()
-        }
-        
-    }
-    
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
         let customCell = cell as! CellView
         
@@ -187,6 +158,55 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         //Gives rounded corners to selected view
         (cell as? CellView)?.selectedView.layer.cornerRadius = 30
         
+        //Add assignment Button Code
+        
+        //Function for add assignment button
+        func addButtonAction(sender: UIButton) {
+            print("Add button pressed")
+            let alertView = UIAlertView();
+            alertView.addButton(withTitle: "OK");
+            alertView.title = "Alert";
+            alertView.message = "Button Pressed!!!";
+            alertView.show();
+        }
+        
+        addAssignmentButton.backgroundColor = UIColor.black
+        addAssignmentButton.setTitle("Add Assignment", for: .normal)
+        addAssignmentButton.addTarget(self, action: #selector(getter: ViewController.addAssignmentButton), for: .touchUpInside)
+        addAssignmentButton.tag = 1
+        self.view.addSubview(addAssignmentButton)
+        
+        
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
+        (cell as? CellView)?.cellSelectionChanged(cellState)
+        
+        let customCell = cell as! CellView
+        
+        // Setup Cell text
+        customCell.dayLabel.text = cellState.text
+        
+        // Setup text color
+        if cellState.dateBelongsTo == .thisMonth {
+            customCell.dayLabel.textColor = thisMonthsDateColor
+        } else {
+            customCell.dayLabel.textColor = otherMonthsDateColor
+        }
+        
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: 160, y: 285)
+        label.textAlignment = .center
+        label.text = "I'm a test label"
+        
+        if calendar.selectedDates.count == 1 {
+            
+            self.view.addSubview(label)
+        }
+        else {
+            label.removeFromSuperview()
+        }
         
         
     }
