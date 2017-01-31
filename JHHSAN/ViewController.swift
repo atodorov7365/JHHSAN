@@ -75,6 +75,10 @@ class ViewController: UIViewController,UITableViewDelegate {
         
         calendarView.visibleDates { (visibleDates: DateSegmentInfo) in
             self.setupViewsOfCalendar(from: visibleDates)
+            
+        //Testing assignment code
+        let testAssign = Assignment(name: "Hello", className: "Hello")
+        self.assignmentArraay.append(testAssign)
         }
         
         
@@ -126,7 +130,7 @@ class ViewController: UIViewController,UITableViewDelegate {
         return cell
     }
 
-    
+    //Alert Functions
     func addAssign(_ textField: UITextField!) {
         textField.placeholder = "Assignment"
         textField1 = textField
@@ -142,20 +146,29 @@ class ViewController: UIViewController,UITableViewDelegate {
         mainTableView.reloadData()
     }
     
+    //Delete Button for Table View
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            assignmentArraay.remove(at: (indexPath as NSIndexPath).row)
+            tableView.reloadData()
+        }
+    }
+    
     @IBAction func addAssignmentButton(_ sender: Any) {
-        //        let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle: UIAlertControllerStyle.alert)
-        //
-        //        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
-        //
-        //        addAlert.addAction(cancelAction)
-        //
-        //        addAlert.addTextField(configurationHandler: addAssign())
-        //        addAlert.addTextField(configurationHandler: addAssignClass())
-        //
-        //        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: saveCollege)
-        //        addAlert.addAction(okAction)
-        //        
-        //        self.present(addAlert, animated: true, completion: nil)
+        let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle:UIAlertControllerStyle.alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        addAlert.addAction(cancelAction)
+        
+        addAlert.addTextField(configurationHandler: addAssign)
+        addAlert.addTextField(configurationHandler: addAssignClass)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: saveAssign)
+        
+        addAlert.addAction(okAction)
+                
+        self.present(addAlert, animated: true, completion: nil)
     }
     
     
