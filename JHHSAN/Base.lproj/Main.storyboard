@@ -173,7 +173,7 @@
                                     <segue destination="7v3-Ve-kQG" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="7SM-nz-ZO0"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Mapstuff" rowHeight="94" id="Y68-tD-OZU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="D214 School Locations" rowHeight="94" id="Y68-tD-OZU">
                                 <rect key="frame" x="0.0" y="446" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y68-tD-OZU" id="ywX-E3-Qqz">
@@ -182,6 +182,17 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="hTS-ZV-9pI" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="5Vj-xs-6eq"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Activites" rowHeight="94" id="hQH-qD-vsE" userLabel="JHHS Activites">
+                                <rect key="frame" x="0.0" y="540" width="768" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hQH-qD-vsE" id="SD0-Qk-XjE">
+                                    <frame key="frameInset" width="768" height="93"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="PxG-FH-Mtp" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="gOm-wX-uTG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -804,6 +815,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QX0-T4-a9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2233.59375" y="-299.4140625"/>
+        </scene>
+        <!--Safari2 View Controller-->
+        <scene sceneID="5dN-m2-hGH">
+            <objects>
+                <viewController id="PxG-FH-Mtp" customClass="Safari2ViewController" customModule="JHHSAN" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BmZ-p5-xEx"/>
+                        <viewControllerLayoutGuide type="bottom" id="QeT-vn-j9n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Foo-ye-imQ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAU-4b-p4m">
+                                <frame key="frameInset" minX="387" minY="271" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hersey Activities"/>
+                                <connections>
+                                    <action selector="heresyWebSite:" destination="VbX-MZ-7Tq" eventType="touchUpInside" id="4Dz-z6-aLt"/>
+                                    <action selector="herseyActivityWebsite:" destination="PxG-FH-Mtp" eventType="touchUpInside" id="4G9-Qy-o8G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogg-3d-xl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2883" y="-299"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6JJ-cN-hUt">
