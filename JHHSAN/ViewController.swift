@@ -9,9 +9,12 @@
 import UIKit
 import JTAppleCalendar
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate {
+    
+    //Nav Bar Variables
     @IBOutlet weak var Open: UIBarButtonItem!
     
+    //Calendar Variables
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     var addAssignmentButton = UIButton()
@@ -32,8 +35,16 @@ class ViewController: UIViewController {
     let thisSelectedMonthsDateColor = UIColor.white
     let otherSelectedMonthsDateColor = UIColor.black
     
-    
+    //Table View Variables
     var headerText = ""
+    var assignmentArraay = [Assignment]()
+    var textField1 = UITextField()
+    var textField2 = UITextField()
+    
+    @IBOutlet weak var mainTableView: UITableView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Open.target = self.revealViewController()
@@ -71,6 +82,8 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    
+    
     func setupViewsOfCalendar(from visibleDates: DateSegmentInfo) {
         guard let startDate = visibleDates.monthDates.first else {
             return
@@ -97,6 +110,51 @@ class ViewController: UIViewController {
         
         
     }
+    
+    //TableView Code
+    
+    //Sets how much cells are in the array
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return assignmentArraay.count
+    }
+    //To exist
+    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = mainTableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
+        cell.textLabel?.text = assignmentArraay[(indexPath as NSIndexPath).row].name
+        return cell
+    }
+
+    
+    func addAssign(_ textField: UITextField!) {
+        textField.placeholder = "Assignment"
+        textField1 = textField
+    }
+    func addAssignClass(_ textField: UITextField!) {
+        
+        textField.placeholder = "Class"
+        textField2 = textField
+    }
+    func saveAssign(_ textField: UIAlertAction!) {
+        let newAssignment = Assignment(name: textField1.text!, className: textField2.text!)
+        assignmentArraay.append(newAssignment)
+        mainTableView.reloadData()
+    }
+    @IBAction func addAssignmentButton(_ sender: Any) {
+//        let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+//        
+//        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+//        
+//        addAlert.addAction(cancelAction)
+//        
+//        addAlert.addTextField(configurationHandler: addAssign())
+//        addAlert.addTextField(configurationHandler: addAssignClass())
+//        
+//        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: saveCollege)
+//        addAlert.addAction(okAction)
+//        
+//        self.present(addAlert, animated: true, completion: nil)
+    }
+    
     
 }
 
@@ -174,7 +232,7 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         addAssignmentButton.setTitle("Add Assignment", for: .normal)
         addAssignmentButton.addTarget(self, action: #selector(getter: ViewController.addAssignmentButton), for: .touchUpInside)
         addAssignmentButton.tag = 1
-        self.view.addSubview(addAssignmentButton)
+        //self.view.addSubview(addAssignmentButton)
         
         
     }

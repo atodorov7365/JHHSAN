@@ -13,6 +13,7 @@
 		8E7069361DD24AE40099F4DB /* CodeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7069321DD24AE40099F4DB /* CodeCellView.swift */; };
 		8E7069371DD24AE40099F4DB /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7069341DD24AE40099F4DB /* CellView.swift */; };
 		8E7069381DD24AE40099F4DB /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7069351DD24AE40099F4DB /* CellView.xib */; };
+		8EB865A31E3F99A9007A8D7D /* AssignmentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB865A21E3F99A9007A8D7D /* AssignmentClass.swift */; };
 		9076E77D44D53C5C1AD8D5A1 /* Pods_JHHSAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E392AE9FAD45BDA0EA06B7 /* Pods_JHHSAN.framework */; };
 		D70CDEAE1DDE141500F56DB7 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A57C11DB66E00005992D0 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		8E7069321DD24AE40099F4DB /* CodeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodeCellView.swift; path = ExampleDateCells/DateCellCreatedWithCode/CodeCellView.swift; sourceTree = "<group>"; };
 		8E7069341DD24AE40099F4DB /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellView.swift; path = ExampleDateCells/DateCellCreatedWithXIB/CellView.swift; sourceTree = "<group>"; };
 		8E7069351DD24AE40099F4DB /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellView.xib; path = ExampleDateCells/DateCellCreatedWithXIB/CellView.xib; sourceTree = "<group>"; };
+		8EB865A21E3F99A9007A8D7D /* AssignmentClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentClass.swift; sourceTree = "<group>"; };
 		D71A57BE1DB66E00005992D0 /* JHHSAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHHSAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71A57C11DB66E00005992D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D71A57C31DB66E00005992D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				D769110D1DBA67400074D26A /* SafariViewController.swift */,
 				D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */,
 				D71A57C51DB66E00005992D0 /* Main.storyboard */,
+				8EB865A21E3F99A9007A8D7D /* AssignmentClass.swift */,
 				D71A57C81DB66E00005992D0 /* Assets.xcassets */,
 				D71A57CA1DB66E00005992D0 /* LaunchScreen.storyboard */,
 				D71A57CD1DB66E00005992D0 /* Info.plist */,
@@ -268,6 +271,7 @@
 				8E41E3B11DD61C350047F302 /* SectionHeaderView1.swift in Sources */,
 				D71A57C41DB66E00005992D0 /* ViewController.swift in Sources */,
 				D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */,
+				8EB865A31E3F99A9007A8D7D /* AssignmentClass.swift in Sources */,
 				D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */,
 				D70CDEAE1DDE141500F56DB7 /* (null) in Sources */,
 				8E7069361DD24AE40099F4DB /* CodeCellView.swift in Sources */,
