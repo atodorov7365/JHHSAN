@@ -17,7 +17,7 @@ class ViewController: UIViewController,UITableViewDelegate {
     //Calendar Variables
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
-    var addAssignmentButton = UIButton()
+    //var addAssignmentButton = UIButton()
     
     var numberOfRows = 6
     let formatter = DateFormatter()
@@ -43,6 +43,8 @@ class ViewController: UIViewController,UITableViewDelegate {
     
     @IBOutlet weak var mainTableView: UITableView!
     
+    //Assignment Variables
+    @IBOutlet weak var addAssignmentButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -139,21 +141,23 @@ class ViewController: UIViewController,UITableViewDelegate {
         assignmentArraay.append(newAssignment)
         mainTableView.reloadData()
     }
+    
     @IBAction func addAssignmentButton(_ sender: Any) {
-//        let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle: UIAlertControllerStyle.alert)
-//        
-//        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
-//        
-//        addAlert.addAction(cancelAction)
-//        
-//        addAlert.addTextField(configurationHandler: addAssign())
-//        addAlert.addTextField(configurationHandler: addAssignClass())
-//        
-//        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: saveCollege)
-//        addAlert.addAction(okAction)
-//        
-//        self.present(addAlert, animated: true, completion: nil)
+        //        let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        //
+        //        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        //
+        //        addAlert.addAction(cancelAction)
+        //
+        //        addAlert.addTextField(configurationHandler: addAssign())
+        //        addAlert.addTextField(configurationHandler: addAssignClass())
+        //
+        //        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: saveCollege)
+        //        addAlert.addAction(okAction)
+        //        
+        //        self.present(addAlert, animated: true, completion: nil)
     }
+    
     
     
 }
