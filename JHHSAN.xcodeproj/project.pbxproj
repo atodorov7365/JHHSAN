@@ -24,6 +24,7 @@
 		D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769110D1DBA67400074D26A /* SafariViewController.swift */; };
 		D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */; };
 		D7809A6E1DF864AB003B236A /* mapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7809A6D1DF864AB003B236A /* mapViewViewController.swift */; };
+		D7B465AA1E27E91B00D35D86 /* Safari2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B465A91E27E91B00D35D86 /* Safari2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D769110D1DBA67400074D26A /* SafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerseyHandbookViewController.swift; path = ../HerseyHandbookViewController.swift; sourceTree = "<group>"; };
 		D7809A6D1DF864AB003B236A /* mapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewViewController.swift; sourceTree = "<group>"; };
+		D7B465A91E27E91B00D35D86 /* Safari2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safari2ViewController.swift; sourceTree = "<group>"; };
 		E7E392AE9FAD45BDA0EA06B7 /* Pods_JHHSAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHHSAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE48424D2AFA38954625E73 /* Pods-JHHSAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHHSAN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHHSAN/Pods-JHHSAN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				D71A57C31DB66E00005992D0 /* ViewController.swift */,
 				D7809A6D1DF864AB003B236A /* mapViewViewController.swift */,
 				D769110D1DBA67400074D26A /* SafariViewController.swift */,
+				D7B465A91E27E91B00D35D86 /* Safari2ViewController.swift */,
 				D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */,
 				D71A57C51DB66E00005992D0 /* Main.storyboard */,
 				D71A57C81DB66E00005992D0 /* Assets.xcassets */,
@@ -270,6 +273,7 @@
 				D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */,
 				D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */,
 				D70CDEAE1DDE141500F56DB7 /* (null) in Sources */,
+				D7B465AA1E27E91B00D35D86 /* Safari2ViewController.swift in Sources */,
 				8E7069361DD24AE40099F4DB /* CodeCellView.swift in Sources */,
 				8E70692F1DD24AD80099F4DB /* AnimationClass.swift in Sources */,
 				D71A57C21DB66E00005992D0 /* AppDelegate.swift in Sources */,

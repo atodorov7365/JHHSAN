@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         
-        Thread.sleep(forTimeInterval: 1)
+        Thread.sleep(forTimeInterval: 0.25)
         //The line above is if we want to increase the launchscreen time
         formatter.dateFormat = "yyyy MM dd"
         calendar.timeZone = TimeZone(secondsFromGMT: 0)!
@@ -174,7 +174,7 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         addAssignmentButton.setTitle("Add Assignment", for: .normal)
         addAssignmentButton.addTarget(self, action: #selector(getter: ViewController.addAssignmentButton), for: .touchUpInside)
         addAssignmentButton.tag = 1
-        self.view.addSubview(addAssignmentButton)
+        //self.view.addSubview(addAssignmentButton)
         
         
     }
@@ -202,10 +202,10 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         
         if calendar.selectedDates.count == 1 {
             
-            self.view.addSubview(label)
+            //self.view.addSubview(label)
         }
         else {
-            label.removeFromSuperview()
+            //label.removeFromSuperview()
         }
         
         
