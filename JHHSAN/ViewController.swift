@@ -146,13 +146,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         mainTableView.reloadData()
     }
     
-//    //Delete Button for Table View
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == UITableViewCellEditingStyle.delete {
-//            assignmentArray.remove(at: (indexPath as NSIndexPath).row)
-//            tableView.reloadData()
-//        }
-//    }
     
     @IBAction func addAssignmentButton(_ sender: Any) {
         let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle:UIAlertControllerStyle.alert)
@@ -169,6 +162,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         addAlert.addAction(okAction)
                 
         self.present(addAlert, animated: true, completion: nil)
+        mainTableView.reloadData()
     }
     
     
