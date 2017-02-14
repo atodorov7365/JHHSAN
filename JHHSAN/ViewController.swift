@@ -311,4 +311,3 @@ func delayRunOnMainThread(_ delay: Double, closure: @escaping () -> ()) {
             Double(Int64(delay * Double(NSEC_PER_SEC))) /
             Double(NSEC_PER_SEC), execute: closure)
 }
-
