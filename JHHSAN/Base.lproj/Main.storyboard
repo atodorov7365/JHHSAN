@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="28" width="502" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x9F-Je-2tF" id="aPb-lm-U9O">
-                                            <frame key="frameInset" width="502" height="43"/>
+                                            <frame key="frameInset" width="502" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -126,7 +126,7 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
-                                    <frame key="frameInset" width="768" height="99"/>
+                                    <frame key="frameInset" width="768" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -137,7 +137,7 @@
                                 <rect key="frame" x="0.0" y="128" width="768" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAQ-Nx-oTx" id="rd4-ik-14s">
-                                    <frame key="frameInset" width="768" height="114"/>
+                                    <frame key="frameInset" width="768" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -148,7 +148,7 @@
                                 <rect key="frame" x="0.0" y="243" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9t7-Rw-fql" id="xUV-DN-7eC">
-                                    <frame key="frameInset" width="768" height="99"/>
+                                    <frame key="frameInset" width="768" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -159,7 +159,7 @@
                                 <rect key="frame" x="0.0" y="343" width="768" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CA-M9-0HM" id="HLo-HM-iLu">
-                                    <frame key="frameInset" width="768" height="102"/>
+                                    <frame key="frameInset" width="768" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -170,7 +170,7 @@
                                 <rect key="frame" x="0.0" y="446" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y68-tD-OZU" id="ywX-E3-Qqz">
-                                    <frame key="frameInset" width="768" height="93"/>
+                                    <frame key="frameInset" width="768" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -181,11 +181,22 @@
                                 <rect key="frame" x="0.0" y="540" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hQH-qD-vsE" id="SD0-Qk-XjE">
-                                    <frame key="frameInset" width="768" height="93"/>
+                                    <frame key="frameInset" width="768" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="PxG-FH-Mtp" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="gOm-wX-uTG"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Infinite Campus" rowHeight="94" id="e23-N9-gCo">
+                                <rect key="frame" x="0.0" y="634" width="768" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e23-N9-gCo" id="VKN-Xs-cfx">
+                                    <frame key="frameInset" width="768" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="1kH-M7-kY5" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="A1F-o7-Fs0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -656,7 +667,7 @@
                                 </constraints>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sov-Sq-pgu">
-                                <frame key="frameInset" minX="-5" height="44" maxX="2"/>
+                                <frame key="frameInset" minX="-7" height="44" maxX="3"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="MaF-mA-av8">
@@ -683,6 +694,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSk-C0-god" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2233.59375" y="359.765625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bvE-nJ-XQq">
+            <objects>
+                <viewController id="1kH-M7-kY5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MMi-Q3-gJU"/>
+                        <viewControllerLayoutGuide type="bottom" id="SBz-2z-91E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S4v-a0-owa">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6U-I8-KAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2897" y="356"/>
         </scene>
         <!--Map View View Controller-->
         <scene sceneID="sO3-Ub-785">
@@ -817,22 +846,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAU-4b-p4m">
-                                <frame key="frameInset" minX="387" minY="271" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Hersey Activities"/>
-                                <connections>
-                                    <action selector="heresyWebSite:" destination="VbX-MZ-7Tq" eventType="touchUpInside" id="4Dz-z6-aLt"/>
-                                    <action selector="herseyActivityWebsite:" destination="PxG-FH-Mtp" eventType="touchUpInside" id="4G9-Qy-o8G"/>
-                                </connections>
-                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsG-H7-aRN">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1024" id="EwU-Xc-Vc1"/>
+                                    <constraint firstAttribute="width" constant="768" id="J99-o3-DDu"/>
+                                </constraints>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zsG-H7-aRN" secondAttribute="trailing" id="FjD-c0-IBE"/>
+                            <constraint firstItem="zsG-H7-aRN" firstAttribute="top" secondItem="Foo-ye-imQ" secondAttribute="top" id="TE5-ub-rf2"/>
+                            <constraint firstItem="zsG-H7-aRN" firstAttribute="leading" secondItem="Foo-ye-imQ" secondAttribute="leading" id="XDG-aS-iMR"/>
+                            <constraint firstItem="QeT-vn-j9n" firstAttribute="top" secondItem="zsG-H7-aRN" secondAttribute="bottom" id="nFk-gi-rqu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webViewActivity" destination="zsG-H7-aRN" id="SUM-sN-2rh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogg-3d-xl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2883" y="-299"/>
+            <point key="canvasLocation" x="2882.8125" y="-299.4140625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6JJ-cN-hUt">
