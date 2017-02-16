@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="28" width="502" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x9F-Je-2tF" id="aPb-lm-U9O">
-                                            <frame key="frameInset" width="502" height="44"/>
+                                            <frame key="frameInset" width="502" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -113,6 +113,104 @@
             </objects>
             <point key="canvasLocation" x="106" y="-536"/>
         </scene>
+        <!--Email View Controller-->
+        <scene sceneID="Q6h-Ut-CB4">
+            <objects>
+                <viewController id="4ek-Vp-nbY" customClass="EmailViewController" customModule="JHHSAN" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xCz-mY-kXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cTz-9T-1sr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQ9-ns-hdX">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yx-cU-Ycm">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="4Kp-Db-Jvx"/>
+                                    <constraint firstAttribute="height" constant="1024" id="h5s-FV-0LP"/>
+                                </constraints>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFw-NA-OqU">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="TfL-ps-9I0">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="9Mi-TX-EZe">
+                                            <connections>
+                                                <segue destination="U4h-TG-yvI" kind="show" id="Dr4-RE-ddN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8yx-cU-Ycm" secondAttribute="trailing" id="0a3-kZ-YLR"/>
+                            <constraint firstItem="cTz-9T-1sr" firstAttribute="top" secondItem="8yx-cU-Ycm" secondAttribute="bottom" id="7rH-Ss-kVA"/>
+                            <constraint firstItem="8yx-cU-Ycm" firstAttribute="leading" secondItem="gQ9-ns-hdX" secondAttribute="leading" id="exH-zn-i4o"/>
+                            <constraint firstItem="8yx-cU-Ycm" firstAttribute="top" secondItem="gQ9-ns-hdX" secondAttribute="top" id="pTE-UQ-HOU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailWebView" destination="8yx-cU-Ycm" id="cpA-Pk-juL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0BP-Tx-yGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625.78125" y="-1221.09375"/>
+        </scene>
+        <!--Moodle View Controller-->
+        <scene sceneID="Icg-4o-z1X">
+            <objects>
+                <viewController id="TMg-FW-lE5" customClass="MoodleViewController" customModule="JHHSAN" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oAD-kw-ZJN"/>
+                        <viewControllerLayoutGuide type="bottom" id="78o-E9-fR3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SkH-1v-CYe">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm2-qL-mG4">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1024" id="04p-fE-K1i"/>
+                                    <constraint firstAttribute="width" constant="768" id="X9e-H4-dO1"/>
+                                </constraints>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5q-OD-HLl">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="MAy-Fj-Drf">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="sEB-Mp-WH8">
+                                            <connections>
+                                                <segue destination="U4h-TG-yvI" kind="show" id="NFO-19-o3X"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dm2-qL-mG4" firstAttribute="top" secondItem="SkH-1v-CYe" secondAttribute="top" id="1rW-Tw-Z1c"/>
+                            <constraint firstItem="dm2-qL-mG4" firstAttribute="leading" secondItem="SkH-1v-CYe" secondAttribute="leading" id="9tC-Up-Q0T"/>
+                            <constraint firstAttribute="trailing" secondItem="dm2-qL-mG4" secondAttribute="trailing" id="QKg-ur-fPS"/>
+                            <constraint firstItem="78o-E9-fR3" firstAttribute="top" secondItem="dm2-qL-mG4" secondAttribute="bottom" id="jYR-em-og9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moodleWebView" destination="dm2-qL-mG4" id="gof-Y6-AVU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Rd-qN-cIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377.34375" y="-1246.2890625"/>
+        </scene>
         <!--Back TableVC-->
         <scene sceneID="LgJ-wH-G5M">
             <objects>
@@ -126,7 +224,7 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
-                                    <frame key="frameInset" width="768" height="100"/>
+                                    <frame key="frameInset" width="768" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -137,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="128" width="768" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAQ-Nx-oTx" id="rd4-ik-14s">
-                                    <frame key="frameInset" width="768" height="115"/>
+                                    <frame key="frameInset" width="768" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -148,7 +246,7 @@
                                 <rect key="frame" x="0.0" y="243" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9t7-Rw-fql" id="xUV-DN-7eC">
-                                    <frame key="frameInset" width="768" height="100"/>
+                                    <frame key="frameInset" width="768" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -159,7 +257,7 @@
                                 <rect key="frame" x="0.0" y="343" width="768" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CA-M9-0HM" id="HLo-HM-iLu">
-                                    <frame key="frameInset" width="768" height="103"/>
+                                    <frame key="frameInset" width="768" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -170,7 +268,7 @@
                                 <rect key="frame" x="0.0" y="446" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y68-tD-OZU" id="ywX-E3-Qqz">
-                                    <frame key="frameInset" width="768" height="94"/>
+                                    <frame key="frameInset" width="768" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -181,7 +279,7 @@
                                 <rect key="frame" x="0.0" y="540" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hQH-qD-vsE" id="SD0-Qk-XjE">
-                                    <frame key="frameInset" width="768" height="94"/>
+                                    <frame key="frameInset" width="768" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -192,11 +290,33 @@
                                 <rect key="frame" x="0.0" y="634" width="768" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e23-N9-gCo" id="VKN-Xs-cfx">
-                                    <frame key="frameInset" width="768" height="94"/>
+                                    <frame key="frameInset" width="768" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="1kH-M7-kY5" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="A1F-o7-Fs0"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JHHS Email" rowHeight="94" id="TwF-yp-0OU">
+                                <rect key="frame" x="0.0" y="728" width="768" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TwF-yp-0OU" id="2tW-WY-Gr6">
+                                    <frame key="frameInset" width="768" height="93"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="4ek-Vp-nbY" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="zKG-6S-qOi"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Moodle" rowHeight="94" id="8su-9V-MKY">
+                                <rect key="frame" x="0.0" y="822" width="768" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8su-9V-MKY" id="RLl-ow-cfH">
+                                    <frame key="frameInset" width="768" height="93"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="TMg-FW-lE5" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Agq-2g-EIz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -565,7 +685,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-rN-CR3">
-                                <frame key="frameInset" minX="-9" height="44" maxX="8"/>
+                                <frame key="frameInset" minX="-9" height="44" maxX="9"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="Xkd-Eg-JMw">
@@ -695,10 +815,10 @@
             </objects>
             <point key="canvasLocation" x="2233.59375" y="359.765625"/>
         </scene>
-        <!--View Controller-->
+        <!--Infinite Campus View Controller-->
         <scene sceneID="bvE-nJ-XQq">
             <objects>
-                <viewController id="1kH-M7-kY5" sceneMemberID="viewController">
+                <viewController id="1kH-M7-kY5" customClass="InfiniteCampusViewController" customModule="JHHSAN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MMi-Q3-gJU"/>
                         <viewControllerLayoutGuide type="bottom" id="SBz-2z-91E"/>
@@ -706,12 +826,43 @@
                     <view key="view" contentMode="scaleToFill" id="S4v-a0-owa">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-fN-uKS">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="Cei-7N-3rK"/>
+                                    <constraint firstAttribute="height" constant="1024" id="PQ3-x6-exw"/>
+                                </constraints>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iC1-bZ-c5a">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="dKg-E3-Qaz">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="59p-Bn-8W6">
+                                            <connections>
+                                                <segue destination="U4h-TG-yvI" kind="show" id="pKK-v6-6Er"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SBz-2z-91E" firstAttribute="top" secondItem="g3m-fN-uKS" secondAttribute="bottom" id="8YK-vL-qS6"/>
+                            <constraint firstItem="g3m-fN-uKS" firstAttribute="top" secondItem="S4v-a0-owa" secondAttribute="top" id="YJE-Ca-XX5"/>
+                            <constraint firstAttribute="trailing" secondItem="g3m-fN-uKS" secondAttribute="trailing" id="alA-Fq-5dJ"/>
+                            <constraint firstItem="g3m-fN-uKS" firstAttribute="leading" secondItem="S4v-a0-owa" secondAttribute="leading" id="oMa-w0-fmy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infiniteCampus" destination="g3m-fN-uKS" id="HHW-1V-v5B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6U-I8-KAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2897" y="356"/>
+            <point key="canvasLocation" x="2896.875" y="370.8984375"/>
         </scene>
         <!--Map View View Controller-->
         <scene sceneID="sO3-Ub-785">
@@ -849,17 +1000,30 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsG-H7-aRN">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1024" id="EwU-Xc-Vc1"/>
-                                    <constraint firstAttribute="width" constant="768" id="J99-o3-DDu"/>
+                                    <constraint firstAttribute="height" constant="1024" id="BeF-9l-258"/>
+                                    <constraint firstAttribute="width" constant="768" id="vVc-8H-DNc"/>
                                 </constraints>
                             </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2lp-7d-QYG">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="5Ad-1K-lHY">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="HAl-Sn-Sox">
+                                            <connections>
+                                                <segue destination="U4h-TG-yvI" kind="show" id="qf2-aT-eQn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zsG-H7-aRN" secondAttribute="trailing" id="FjD-c0-IBE"/>
-                            <constraint firstItem="zsG-H7-aRN" firstAttribute="top" secondItem="Foo-ye-imQ" secondAttribute="top" id="TE5-ub-rf2"/>
-                            <constraint firstItem="zsG-H7-aRN" firstAttribute="leading" secondItem="Foo-ye-imQ" secondAttribute="leading" id="XDG-aS-iMR"/>
-                            <constraint firstItem="QeT-vn-j9n" firstAttribute="top" secondItem="zsG-H7-aRN" secondAttribute="bottom" id="nFk-gi-rqu"/>
+                            <constraint firstItem="QeT-vn-j9n" firstAttribute="top" secondItem="zsG-H7-aRN" secondAttribute="bottom" id="AXC-lg-Fhb"/>
+                            <constraint firstItem="zsG-H7-aRN" firstAttribute="leading" secondItem="Foo-ye-imQ" secondAttribute="leading" id="aXe-7q-ZIu"/>
+                            <constraint firstItem="zsG-H7-aRN" firstAttribute="top" secondItem="Foo-ye-imQ" secondAttribute="top" id="f3C-hj-9gu"/>
+                            <constraint firstAttribute="trailing" secondItem="zsG-H7-aRN" secondAttribute="trailing" id="lmv-TL-Dot"/>
                         </constraints>
                     </view>
                     <connections>
@@ -894,11 +1058,11 @@
         <image name="icon-menu" width="29" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b9t-V0-E3y"/>
-        <segue reference="Rqc-3h-Y9W"/>
-        <segue reference="eNC-ij-Kx2"/>
-        <segue reference="7SM-nz-ZO0"/>
-        <segue reference="eYO-4D-vGD"/>
         <segue reference="1Kb-L2-4Aq"/>
+        <segue reference="7SM-nz-ZO0"/>
+        <segue reference="NFO-19-o3X"/>
+        <segue reference="eYO-4D-vGD"/>
+        <segue reference="eNC-ij-Kx2"/>
+        <segue reference="Rqc-3h-Y9W"/>
     </inferredMetricsTieBreakers>
 </document>

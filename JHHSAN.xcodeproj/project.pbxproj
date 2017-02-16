@@ -26,6 +26,9 @@
 		D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */; };
 		D7809A6E1DF864AB003B236A /* mapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7809A6D1DF864AB003B236A /* mapViewViewController.swift */; };
 		D7B465AA1E27E91B00D35D86 /* Safari2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B465A91E27E91B00D35D86 /* Safari2ViewController.swift */; };
+		D7CF67BC1E54B4F3000EAB53 /* InfiniteCampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF67BB1E54B4F3000EAB53 /* InfiniteCampusViewController.swift */; };
+		D7CF67BE1E54B5B4000EAB53 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF67BD1E54B5B4000EAB53 /* EmailViewController.swift */; };
+		D7CF67C01E54B5CC000EAB53 /* MoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CF67BF1E54B5CC000EAB53 /* MoodleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HerseyHandbookViewController.swift; path = ../HerseyHandbookViewController.swift; sourceTree = "<group>"; };
 		D7809A6D1DF864AB003B236A /* mapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewViewController.swift; sourceTree = "<group>"; };
 		D7B465A91E27E91B00D35D86 /* Safari2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safari2ViewController.swift; sourceTree = "<group>"; };
+		D7CF67BB1E54B4F3000EAB53 /* InfiniteCampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteCampusViewController.swift; sourceTree = "<group>"; };
+		D7CF67BD1E54B5B4000EAB53 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		D7CF67BF1E54B5CC000EAB53 /* MoodleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodleViewController.swift; sourceTree = "<group>"; };
 		E7E392AE9FAD45BDA0EA06B7 /* Pods_JHHSAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHHSAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE48424D2AFA38954625E73 /* Pods-JHHSAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHHSAN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JHHSAN/Pods-JHHSAN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +140,9 @@
 				D7B465A91E27E91B00D35D86 /* Safari2ViewController.swift */,
 				D77657F41DBFABAF00721C57 /* HerseyHandbookViewController.swift */,
 				D71A57C51DB66E00005992D0 /* Main.storyboard */,
+				D7CF67BF1E54B5CC000EAB53 /* MoodleViewController.swift */,
+				D7CF67BD1E54B5B4000EAB53 /* EmailViewController.swift */,
+				D7CF67BB1E54B4F3000EAB53 /* InfiniteCampusViewController.swift */,
 				8EB865A21E3F99A9007A8D7D /* AssignmentClass.swift */,
 				D71A57C81DB66E00005992D0 /* Assets.xcassets */,
 				D71A57CA1DB66E00005992D0 /* LaunchScreen.storyboard */,
@@ -274,6 +283,9 @@
 				8E41E3B11DD61C350047F302 /* SectionHeaderView1.swift in Sources */,
 				D71A57C41DB66E00005992D0 /* ViewController.swift in Sources */,
 				D769110E1DBA67400074D26A /* SafariViewController.swift in Sources */,
+				D7CF67BC1E54B4F3000EAB53 /* InfiniteCampusViewController.swift in Sources */,
+				D7CF67C01E54B5CC000EAB53 /* MoodleViewController.swift in Sources */,
+				D7CF67BE1E54B5B4000EAB53 /* EmailViewController.swift in Sources */,
 				8EB865A31E3F99A9007A8D7D /* AssignmentClass.swift in Sources */,
 				D77657F51DBFABAF00721C57 /* HerseyHandbookViewController.swift in Sources */,
 				D70CDEAE1DDE141500F56DB7 /* (null) in Sources */,
