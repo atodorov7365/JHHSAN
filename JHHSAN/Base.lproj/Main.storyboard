@@ -47,6 +47,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fVw-jL-9jx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Y0Q-yz-0uH"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbR-VJ-LHo">
                                 <rect key="frame" x="484" y="683" width="151" height="30"/>
@@ -91,7 +95,7 @@
                         <outlet property="Open" destination="S0v-2d-jdA" id="lgP-Pb-ETT"/>
                         <outlet property="addAssignmentButton" destination="mbR-VJ-LHo" id="F8V-Jo-bkO"/>
                         <outlet property="calendarView" destination="88T-2j-3tG" id="HqD-P5-wSg"/>
-                        <outlet property="mainTableView" destination="Cde-gb-kZR" id="zRt-a6-hDa"/>
+                        <outlet property="mainTableView" destination="Cde-gb-kZR" id="X8O-IL-daO"/>
                         <outlet property="monthLabel" destination="3YM-ZC-ior" id="2us-gy-eS0"/>
                     </connections>
                 </viewController>

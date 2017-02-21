@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 
-class ViewController: UIViewController,UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //Nav Bar Variables
     @IBOutlet weak var Open: UIBarButtonItem!
@@ -37,7 +37,7 @@ class ViewController: UIViewController,UITableViewDelegate {
     
     //Table View Variables
     var headerText = ""
-    var assignmentArraay = [Assignment]()
+    var assignmentArray = [Assignment]()
     var textField1 = UITextField()
     var textField2 = UITextField()
     
@@ -51,7 +51,7 @@ class ViewController: UIViewController,UITableViewDelegate {
         super.viewDidLoad()
         Open.target = self.revealViewController()
         //Open.action = #selector(SWRevealViewController.revealToggle(_:))
-        Open.action = Selector("revealToggle:")
+        Open.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         
@@ -75,6 +75,10 @@ class ViewController: UIViewController,UITableViewDelegate {
         
         calendarView.visibleDates { (visibleDates: DateSegmentInfo) in
             self.setupViewsOfCalendar(from: visibleDates)
+            
+        //Testing assignment code
+        let testAssign = Assignment(name: "Hello", className: "Hello")
+        self.assignmentArray.append(testAssign)
         }
         
         
@@ -115,18 +119,18 @@ class ViewController: UIViewController,UITableViewDelegate {
     
     //TableView Code
     
-    //Sets how much cells are in the array
+    //To exist: Sets how much cells are in the array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return assignmentArraay.count
+        return assignmentArray.count
     }
-    //To exist
-    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //To exist:
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
-        cell.textLabel?.text = assignmentArraay[(indexPath as NSIndexPath).row].name
+        cell.textLabel?.text = assignmentArray[(indexPath as NSIndexPath).row].name
         return cell
     }
 
-    
+    //Alert Functions
     func addAssign(_ textField: UITextField!) {
         textField.placeholder = "Assignment"
         textField1 = textField
@@ -138,24 +142,27 @@ class ViewController: UIViewController,UITableViewDelegate {
     }
     func saveAssign(_ textField: UIAlertAction!) {
         let newAssignment = Assignment(name: textField1.text!, className: textField2.text!)
-        assignmentArraay.append(newAssignment)
+        assignmentArray.append(newAssignment)
         mainTableView.reloadData()
     }
     
+    
     @IBAction func addAssignmentButton(_ sender: Any) {
-        //        let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle: UIAlertControllerStyle.alert)
-        //
-        //        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
-        //
-        //        addAlert.addAction(cancelAction)
-        //
-        //        addAlert.addTextField(configurationHandler: addAssign())
-        //        addAlert.addTextField(configurationHandler: addAssignClass())
-        //
-        //        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: saveCollege)
-        //        addAlert.addAction(okAction)
-        //        
-        //        self.present(addAlert, animated: true, completion: nil)
+        let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle:UIAlertControllerStyle.alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        addAlert.addAction(cancelAction)
+        
+        addAlert.addTextField(configurationHandler: addAssign)
+        addAlert.addTextField(configurationHandler: addAssignClass)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: saveAssign)
+        
+        addAlert.addAction(okAction)
+                
+        self.present(addAlert, animated: true, completion: nil)
+        mainTableView.reloadData()
     }
     
     
@@ -220,23 +227,6 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         //Gives rounded corners to selected view
         (cell as? CellView)?.selectedView.layer.cornerRadius = 30
         
-        //Add assignment Button Code
-        
-        //Function for add assignment button
-        func addButtonAction(sender: UIButton) {
-            print("Add button pressed")
-            let alertView = UIAlertView();
-            alertView.addButton(withTitle: "OK");
-            alertView.title = "Alert";
-            alertView.message = "Button Pressed!!!";
-            alertView.show();
-        }
-        
-        addAssignmentButton.backgroundColor = UIColor.black
-        addAssignmentButton.setTitle("Add Assignment", for: .normal)
-        addAssignmentButton.addTarget(self, action: #selector(getter: ViewController.addAssignmentButton), for: .touchUpInside)
-        addAssignmentButton.tag = 1
-        //self.view.addSubview(addAssignmentButton)
         
         
     }
