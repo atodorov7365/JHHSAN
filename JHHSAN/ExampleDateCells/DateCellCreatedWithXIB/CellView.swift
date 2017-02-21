@@ -1,6 +1,5 @@
 //
 //  CellView.swift
-//  testApplicationCalendar
 //
 //  Created by JayT on 2016-03-04.
 //  Copyright © 2016 OS-Tech. All rights reserved.
@@ -13,8 +12,17 @@ import JTAppleCalendar
 class CellView: JTAppleDayCellView {
     @IBInspectable var todayColor: UIColor!
     @IBInspectable var normalDayColor: UIColor!
+    
+    //Default Cell View
     @IBOutlet var selectedView: AnimationView!
     @IBOutlet var dayLabel: UILabel!
+    
+    
+    //Cell View with Assignment
+    @IBOutlet weak var selectedViewAssign: AnimationView!
+    @IBOutlet weak var dayLabelAssign: UILabel!
+    
+    
     let textSelectedColor = UIColor.white
     let textDeselectedColor = UIColor.black
     let previousMonthTextColor = UIColor.gray
@@ -49,11 +57,10 @@ class CellView: JTAppleDayCellView {
 //        
         
         // Setup cell selection status
-
-            self.configueViewIntoBubbleView(cellState)
-            //        }
-            // Configure Visibility
-            configureVisibility(cellState)
+        self.configueViewIntoBubbleView(cellState)
+        
+        // Configure Visibility
+        configureVisibility(cellState)
 
             
         }
@@ -81,26 +88,26 @@ class CellView: JTAppleDayCellView {
             if cellState.isSelected == true {
                 if selectedView.isHidden == true {
                     configueViewIntoBubbleView(cellState)
-                    //                selectedView.animateWithBounceEffect(withCompletionHandler: {
-                    //                })
+                    selectedView.animateWithBounceEffect(withCompletionHandler: {})
                 }
             } else {
                 configueViewIntoBubbleView(cellState, animateDeselection: true)
             }
         }
+    
         fileprivate func configueViewIntoBubbleView(_ cellState: CellState, animateDeselection: Bool = false) {
             if cellState.isSelected {
-                //            self.selectedView.layer.cornerRadius =  self.selectedView.frame.width  / 2
+                self.selectedView.layer.cornerRadius =  self.selectedView.frame.width  / 2
                 self.selectedView.isHidden = false
                 configureTextColor(cellState)
             } else {
                 if animateDeselection {
                     configureTextColor(cellState)
                     if selectedView.isHidden == false {
-                        //                    selectedView.animateWithFadeEffect(withCompletionHandler: { () -> Void in
-                        self.selectedView.isHidden = true
-                        //                        self.selectedView.alpha = 1
-                        //                    })
+//                        selectedView.animateWithFadeEffect(withCompletionHandler: { () -> Void in
+                            self.selectedView.isHidden = true
+                            //self.selectedView.alpha = 1
+//                        })
                     }
                 } else {
                     selectedView.isHidden = true
