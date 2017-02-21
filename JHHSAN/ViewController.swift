@@ -227,6 +227,7 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         //Gives rounded corners to selected view
         (cell as? CellView)?.selectedView.layer.cornerRadius = 30
         
+        //Changing cell label
         
         
     }
@@ -244,20 +245,6 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
             customCell.dayLabel.textColor = thisMonthsDateColor
         } else {
             customCell.dayLabel.textColor = otherMonthsDateColor
-        }
-        
-        
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        label.center = CGPoint(x: 160, y: 285)
-        label.textAlignment = .center
-        label.text = "I'm a test label"
-        
-        if calendar.selectedDates.count == 1 {
-            
-            //self.view.addSubview(label)
-        }
-        else {
-            //label.removeFromSuperview()
         }
         
         
