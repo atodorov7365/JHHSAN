@@ -10,17 +10,20 @@ import UIKit
 import SafariServices
 
 class Safari2ViewController: UIViewController,SFSafariViewControllerDelegate {
+    
+    @IBOutlet weak var webViewActivity: UIWebView!
     var urlString = "http://jhhs.d214.org/co-curricular/activities/"
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadAddressURL()
+        
     }
-    @IBAction func herseyActivityWebsite(_ sender: UIButton) {
-        let url = NSURL(string: urlString)!
-        UIApplication.shared.openURL(url as URL)
+    func loadAddressURL(){
+        let requestUrl = NSURL(string: urlString)
+        let request = NSURLRequest(url: requestUrl as! URL)
+        webViewActivity.loadRequest(request as URLRequest)
     }
-
+   
     
 
 }
