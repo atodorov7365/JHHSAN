@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  JHHSAN
 //
-//  Created by student3 on 10/18/16.
 //  Copyright © 2016 John Hersey High School. All rights reserved.
 //
 
@@ -149,7 +148,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func addAssignmentButton(_ sender: Any) {
         let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle:UIAlertControllerStyle.alert)
-
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
         
         addAlert.addAction(cancelAction)
@@ -160,10 +159,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: saveAssign)
         
         addAlert.addAction(okAction)
-                
+        
         self.present(addAlert, animated: true, completion: nil)
         mainTableView.reloadData()
     }
+    
     
     
     
