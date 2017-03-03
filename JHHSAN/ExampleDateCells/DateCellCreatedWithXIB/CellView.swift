@@ -17,10 +17,8 @@ class CellView: JTAppleDayCellView {
     @IBOutlet var selectedView: AnimationView!
     @IBOutlet var dayLabel: UILabel!
     
+    @IBOutlet weak var assignmentTag: UIImageView!
     
-    //Cell View with Assignment
-    @IBOutlet weak var selectedViewAssign: AnimationView!
-    @IBOutlet weak var dayLabelAssign: UILabel!
     
     
     let textSelectedColor = UIColor.white
@@ -65,6 +63,7 @@ class CellView: JTAppleDayCellView {
             
         }
         func configureVisibility(_ cellState: CellState) {
+            assignmentTag.isHidden = false
             if
                 cellState.dateBelongsTo == .thisMonth ||
                     cellState.dateBelongsTo == .previousMonthWithinBoundary ||
@@ -76,6 +75,7 @@ class CellView: JTAppleDayCellView {
             }
         }
         func configureTextColor(_ cellState: CellState) {
+            assignmentTag.isHidden = false
             if cellState.isSelected {
                 dayLabel.textColor = textSelectedColor
             } else if cellState.dateBelongsTo == .thisMonth {
@@ -86,6 +86,7 @@ class CellView: JTAppleDayCellView {
         }
         func cellSelectionChanged(_ cellState: CellState) {
             if cellState.isSelected == true {
+                
                 if selectedView.isHidden == true {
                     configueViewIntoBubbleView(cellState)
                     selectedView.animateWithBounceEffect(withCompletionHandler: {})
@@ -93,6 +94,7 @@ class CellView: JTAppleDayCellView {
             } else {
                 configueViewIntoBubbleView(cellState, animateDeselection: true)
             }
+
         }
     
         fileprivate func configueViewIntoBubbleView(_ cellState: CellState, animateDeselection: Bool = false) {
