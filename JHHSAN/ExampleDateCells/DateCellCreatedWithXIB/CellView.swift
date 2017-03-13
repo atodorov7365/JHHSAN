@@ -52,7 +52,7 @@ class CellView: JTAppleDayCellView {
 //        } else {
 //            self.backgroundColor = self.normalDayColor
 //        }
-//        
+        
         
         // Setup cell selection status
         self.configueViewIntoBubbleView(cellState)

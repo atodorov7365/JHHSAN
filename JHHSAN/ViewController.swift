@@ -10,20 +10,28 @@ import JTAppleCalendar
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+
+    
     //Nav Bar Variables
     @IBOutlet weak var Open: UIBarButtonItem!
     
     //Calendar Variables
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
-    //var addAssignmentButton = UIButton()
     
+    var todaysDate = ""
+    var date = Date()
     var numberOfRows = 6
     let formatter = DateFormatter()
     var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
     var generateInDates: InDateCellGeneration = .forAllMonths
     var generateOutDates: OutDateCellGeneration = .tillEndOfGrid
     let firstDayOfWeek: DaysOfWeek = .sunday
+    var year = 2000
+    var month = 1
+    var day = 1
+    
+    
     let disabledColor = UIColor.lightGray
     let enabledColor = UIColor.blue
     let dateCellSize: CGFloat? = nil
@@ -54,12 +62,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         
-        Thread.sleep(forTimeInterval: 0.25)
-        //The line above is if we want to increase the launchscreen time
-        formatter.dateFormat = "yyyy MM dd"
-        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        Thread.sleep(forTimeInterval: 0.25) //Increases launch screen time
         
-        //Setting up your dataSource and delegate is manditory
+        formatter.dateFormat = "yyyy MM dd"
+        //calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        
+        
         
         calendarView.delegate = self
         calendarView.dataSource = self
@@ -74,12 +82,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         calendarView.visibleDates { (visibleDates: DateSegmentInfo) in
             self.setupViewsOfCalendar(from: visibleDates)
-            
-        //Testing assignment code
-        let testAssign = Assignment(name: "Hello", className: "Hello")
-        self.assignmentArray.append(testAssign)
         }
         
+        //Get date
+        //new code will be:
+        
+        date = Date()
+        calendar = Calendar.current
+        
+        year = calendar.component(.year, from: date)
+        month = calendar.component(.month, from: date)
+        day = calendar.component(.day, from: date)
+        
+        formatter.dateFormat = "yyyy-MM-dd"
+        todaysDate = self.formatter.string(from: Date())
         
     }
     
@@ -112,8 +128,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         monthLabel.text = monthName + " " + String(year)
         
         
-        
-        
     }
     
     //TableView Code
@@ -140,9 +154,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         textField2 = textField
     }
     func saveAssign(_ textField: UIAlertAction!) {
-        let newAssignment = Assignment(name: textField1.text!, className: textField2.text!)
+        let newAssignment = Assignment(name: textField1.text!, className: textField2.text!, date: todaysDate)
         assignmentArray.append(newAssignment)
         mainTableView.reloadData()
+        print(assignmentArray[0].dateDue)
     }
     
     
@@ -162,6 +177,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.present(addAlert, animated: true, completion: nil)
         mainTableView.reloadData()
+        
     }
     
     
@@ -172,7 +188,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 // MARK : JTAppleCalendarDelegate
 extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        let startDate = formatter.date(from: "2016 11 09 ")!
+        let startDate = formatter.date(from: "2017 3 1")!
         let endDate = formatter.date(from: "2020 12 30")!
         let parameters = ConfigurationParameters(
             startDate: startDate,
