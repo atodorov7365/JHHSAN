@@ -134,6 +134,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //To exist: Sets how much cells are in the array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        addAssignmentButton.titleLabel?.font = UIFont(name: "Avenir", size: 19)
         return assignmentArray.count
     }
     //To exist:
