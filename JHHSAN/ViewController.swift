@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     
     var todaysDate = ""
+    var selectedDate = ""
     var date = Date()
     var numberOfRows = 6
     let formatter = DateFormatter()
@@ -31,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var month = 1
     var day = 1
     
-    
+    //GUI
     let disabledColor = UIColor.lightGray
     let enabledColor = UIColor.blue
     let dateCellSize: CGFloat? = nil
@@ -45,10 +46,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //Table View Variables
     var headerText = ""
     var assignmentArray = [Assignment]()
+    var currentAssignments = [Assignment]()
     var textField1 = UITextField()
     var textField2 = UITextField()
     
     @IBOutlet weak var mainTableView: UITableView!
+    
+    //TableView Related Buttons
+    @IBOutlet weak var editButton: UIButton!
+    
     
     //Assignment Variables
     @IBOutlet weak var addAssignmentButton: UIButton!
@@ -56,46 +62,45 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Open.target = self.revealViewController()
-        //Open.action = #selector(SWRevealViewController.revealToggle(_:))
-        Open.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        //Misc.
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
-        
         Thread.sleep(forTimeInterval: 0.25) //Increases launch screen time
         
-        formatter.dateFormat = "yyyy MM dd"
-        //calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        //Side menu
+        Open.target = self.revealViewController()
+        Open.action = #selector(SWRevealViewController.revealToggle(_:))
         
+        //Cal code
+        date = Date()
+        calendar = Calendar.current
+        year = calendar.component(.year, from: date)
+        month = calendar.component(.month, from: date)
+        day = calendar.component(.day, from: date)
+        formatter.dateFormat = "MM/dd/yyyy"
+        todaysDate = self.formatter.string(from: Date())
+        selectedDate = todaysDate
         
-        
+        //Format cal views
         calendarView.delegate = self
         calendarView.dataSource = self
-        
         calendarView.registerCellViewXib(file: "CellView")
-        
         calendarView.registerHeaderView(xibFileNames: ["SectionHeaderView1"])
-        
-        
         calendarView.cellInset = CGPoint(x: 0, y: 0)
         calendarView.allowsMultipleSelection = true
-        
         calendarView.visibleDates { (visibleDates: DateSegmentInfo) in
             self.setupViewsOfCalendar(from: visibleDates)
         }
         
-        //Get date
-        //new code will be:
+        //Sets up current tableview objects
+        currentAssignments = checkDateOfAssignments(array: assignmentArray, date: selectedDate)
         
-        date = Date()
-        calendar = Calendar.current
+        //Sets Up GUI
+        monthLabel.font = UIFont(name: "Avenir", size: 50)
+        monthLabel.textColor = UIColor.white
+        addAssignmentButton.titleLabel?.font = UIFont(name: "Avenir", size: 19)
+        editButton.titleLabel?.font = UIFont(name: "Avenir", size: 19)
         
-        year = calendar.component(.year, from: date)
-        month = calendar.component(.month, from: date)
-        day = calendar.component(.day, from: date)
-        
-        formatter.dateFormat = "yyyy-MM-dd"
-        todaysDate = self.formatter.string(from: Date())
         
     }
     
@@ -120,30 +125,103 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let year = calendar.component(.year, from: startDate)
         
         //Change month label attributes here
-        monthLabel.font = UIFont(name: "Avenir", size: 50)
-        monthLabel.textColor = UIColor.white
-        
         headerText = monthLabel.text!
-        
         monthLabel.text = monthName + " " + String(year)
         
         
+    }
+    
+    //Functions for Assignments
+    func checkNumOfAssignments(array: [Assignment], date: String) -> Int {
+        var count = 0
+        for i in 0 ..< array.count {
+            
+            if array[i].dateAssigned == date {
+                count += 1
+            }
+        }
+        return count
+    }
+    
+    func checkDateOfAssignments(array: [Assignment], date: String) -> Array<Assignment> {
+        var datesAssignments = [Assignment]()
+        
+        for i in 0 ..< array.count {
+            if (array[i].dateAssigned == date) {
+                datesAssignments.append(array[i])
+            }
+        }
+        return datesAssignments
+    }
+    
+    func checkAssignmentInArray(array: [Assignment], assignment: Assignment ) -> Int {
+        for i in 0 ..< array.count {
+            if (array[i].name == assignment.name) {
+                return i
+            }
+        }
+        return 0
+    }
+    
+    func printAssignmentArray(array: [Assignment]) {
+        for i in 0 ..< array.count {
+            print(array[i].name)
+        }
     }
     
     //TableView Code
     
     //To exist: Sets how much cells are in the array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        addAssignmentButton.titleLabel?.font = UIFont(name: "Avenir", size: 19)
-        return assignmentArray.count
+        return checkNumOfAssignments(array: currentAssignments, date: selectedDate)
     }
-    //To exist:
+    
+    //Creates the tableview cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
-        cell.textLabel?.text = assignmentArray[(indexPath as NSIndexPath).row].name
+        cell.textLabel?.text = currentAssignments[(indexPath as NSIndexPath).row].name
+        cell.detailTextLabel?.text = currentAssignments[(indexPath as NSIndexPath).row].className
         return cell
     }
+//    
+//    //Rearranges tableview cells
+//    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        let sourceIndex = (sourceIndexPath as NSIndexPath).row
+//        let selectedAssignment = currentAssignments[sourceIndex]
+//        currentAssignments = checkDateOfAssignments(array: assignmentArray, date: selectedDate)
+//        
+//        //Removes assignment
+//        currentAssignments.remove(at: sourceIndex)
+//        assignmentArray.remove(at: checkAssignmentInArray(array: currentAssignments, assignment: selectedAssignment))
+//    
+//        //Reinserts assignment
+//        currentAssignments.insert(selectedAssignment, at: (destinationIndexPath as NSIndexPath).row)
+//        assignmentArray.insert(selectedAssignment, at: checkAssignmentInArray(array: currentAssignments, assignment: selectedAssignment))
+//        
+//        //Reiterates through the array, should be the same
+//        printAssignmentArray(array: currentAssignments)
+//        printAssignmentArray(array: assignmentArray)
+//        
+//        tableView.reloadData()
+//    
+//    }
+    
+    //Deletes tableview cells
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let index = (indexPath as NSIndexPath).row
+            assignmentArray.remove(at: checkAssignmentInArray(array: currentAssignments, assignment: currentAssignments[index]))
+            currentAssignments.remove(at: index)
+            
+            //Reiterates through the array, should be the same
+            printAssignmentArray(array: currentAssignments)
+            printAssignmentArray(array: assignmentArray)
 
+            tableView.reloadData()
+        }
+    }
+    
     //Alert Functions
     func addAssign(_ textField: UITextField!) {
         textField.placeholder = "Assignment"
@@ -157,11 +235,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func saveAssign(_ textField: UIAlertAction!) {
         let newAssignment = Assignment(name: textField1.text!, className: textField2.text!, date: todaysDate)
         assignmentArray.append(newAssignment)
+        currentAssignments.append(newAssignment)
         mainTableView.reloadData()
-        print(assignmentArray[0].dateDue)
     }
     
-    
+    //TableView Buttons
     @IBAction func addAssignmentButton(_ sender: Any) {
         let addAlert = UIAlertController(title: "Add Assignment", message: nil, preferredStyle:UIAlertControllerStyle.alert)
         
@@ -181,16 +259,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    @IBAction func editAssignmentsButton(_ sender: Any) {
+        if editButton.tag == 0 {
+            mainTableView.isEditing = true
+            editButton.tag = 1
+        }
+        else {
+            mainTableView.isEditing = false
+            editButton.tag = 0
+        }
+    }
+    
     
     
     
 }
 
-// MARK : JTAppleCalendarDelegate
+//JT Calendar Extension
 extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        let startDate = formatter.date(from: "2017 3 1")!
-        let endDate = formatter.date(from: "2020 12 30")!
+        let startDate = formatter.date(from: "01 01 2017")!
+        let endDate = formatter.date(from: "12 01 2020")!
         let parameters = ConfigurationParameters(
             startDate: startDate,
             endDate: endDate,
@@ -299,6 +388,8 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
     
 }
 
+
+//Function Delays Launch Screen
 func delayRunOnMainThread(_ delay: Double, closure: @escaping () -> ()) {
     DispatchQueue.main.asyncAfter(
         deadline: DispatchTime.now() +
