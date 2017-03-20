@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--JHHS Assignment Notebook-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JHHSAN" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,18 +52,18 @@
                                         <rect key="frame" x="0.0" y="28" width="758" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x9F-Je-2tF" id="aPb-lm-U9O">
-                                            <rect key="frame" x="0.0" y="0.0" width="691" height="35.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="691" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ru-W2-8cE">
-                                                    <rect key="frame" x="43" y="1" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="43" y="0.0" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cSa-XQ-Smt">
-                                                    <rect key="frame" x="43" y="21.5" width="33" height="14.5"/>
+                                                    <rect key="frame" x="43" y="21" width="33" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -135,7 +135,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="x7B-2P-cNa">
+                    <navigationItem key="navigationItem" title="JHHS Assignment Notebook" id="x7B-2P-cNa">
                         <barButtonItem key="leftBarButtonItem" image="icon-menu" id="S0v-2d-jdA"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -287,7 +287,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eID-C5-WlP" id="H3O-1h-LLY">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -298,7 +298,7 @@
                                 <rect key="frame" x="0.0" y="128" width="1024" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mAQ-Nx-oTx" id="rd4-ik-14s">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="115"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -309,7 +309,7 @@
                                 <rect key="frame" x="0.0" y="243" width="1024" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9t7-Rw-fql" id="xUV-DN-7eC">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -320,7 +320,7 @@
                                 <rect key="frame" x="0.0" y="343" width="1024" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CA-M9-0HM" id="HLo-HM-iLu">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="103"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -331,7 +331,7 @@
                                 <rect key="frame" x="0.0" y="446" width="1024" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y68-tD-OZU" id="ywX-E3-Qqz">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="94"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -342,7 +342,7 @@
                                 <rect key="frame" x="0.0" y="540" width="1024" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hQH-qD-vsE" id="SD0-Qk-XjE">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="94"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -353,7 +353,7 @@
                                 <rect key="frame" x="0.0" y="634" width="1024" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e23-N9-gCo" id="VKN-Xs-cfx">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="94"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -364,7 +364,7 @@
                                 <rect key="frame" x="0.0" y="728" width="1024" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TwF-yp-0OU" id="2tW-WY-Gr6">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="94"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -375,7 +375,7 @@
                                 <rect key="frame" x="0.0" y="822" width="1024" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8su-9V-MKY" id="RLl-ow-cfH">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="94"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="93"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1122,11 +1122,11 @@
         <image name="icon-menu" width="29" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iMK-aS-akb"/>
-        <segue reference="ac4-74-YCn"/>
-        <segue reference="KGi-tR-A6R"/>
+        <segue reference="gd5-zR-hk4"/>
         <segue reference="3HF-6p-xKx"/>
+        <segue reference="ac4-74-YCn"/>
         <segue reference="1Kb-L2-4Aq"/>
         <segue reference="hQE-SN-aYG"/>
+        <segue reference="KGi-tR-A6R"/>
     </inferredMetricsTieBreakers>
 </document>
