@@ -160,7 +160,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 return i
             }
         }
-        return 0
+        return -1
     }
     
     func printAssignmentArray(array: [Assignment]) {
@@ -333,7 +333,11 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         //Gives rounded corners to selected view
         (cell as? CellView)?.selectedView.layer.cornerRadius = 30
         
-        //Changing cell label
+        //Insert code for changing which tableview shows here
+        selectedDate = customCell.todayDate
+        mainTableView.reloadData()
+        
+        //Insert code for changing cell label here
         
         
     }
@@ -353,6 +357,8 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
             customCell.dayLabel.textColor = otherMonthsDateColor
         }
         
+        //Insert code for changing cell label here
+        selectedDate = todaysDate
         
     }
     
