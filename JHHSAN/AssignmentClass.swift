@@ -13,14 +13,14 @@ class Assignment
 {
     var name : String
     var className: String
-    var dateDue: String
+    var dateAssigned: String
     
     
     init(name a : String, className c : String, date d : String)
     {
         name = a
         className = c
-        dateDue = d
+        dateAssigned = d
         
     }
     
