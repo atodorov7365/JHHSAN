@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U4h-TG-yvI">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U4h-TG-yvI">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -187,12 +187,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yx-cU-Ycm">
-                                <rect key="frame" x="0.0" y="342" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="768" id="4Kp-Db-Jvx"/>
-                                    <constraint firstAttribute="height" constant="1024" id="h5s-FV-0LP"/>
-                                </constraints>
                             </webView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFw-NA-OqU">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
@@ -201,7 +197,7 @@
                                     <navigationItem title="Title" id="TfL-ps-9I0">
                                         <barButtonItem key="leftBarButtonItem" title="Done" id="9Mi-TX-EZe">
                                             <connections>
-                                                <segue destination="U4h-TG-yvI" kind="show" id="Dr4-RE-ddN"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" modalTransitionStyle="crossDissolve" id="Dr4-RE-ddN"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -210,10 +206,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="8yx-cU-Ycm" secondAttribute="trailing" id="0a3-kZ-YLR"/>
-                            <constraint firstItem="cTz-9T-1sr" firstAttribute="top" secondItem="8yx-cU-Ycm" secondAttribute="bottom" id="7rH-Ss-kVA"/>
-                            <constraint firstItem="8yx-cU-Ycm" firstAttribute="leading" secondItem="gQ9-ns-hdX" secondAttribute="leading" id="exH-zn-i4o"/>
-                            <constraint firstItem="8yx-cU-Ycm" firstAttribute="top" secondItem="gQ9-ns-hdX" secondAttribute="top" id="pTE-UQ-HOU"/>
+                            <constraint firstItem="8yx-cU-Ycm" firstAttribute="centerX" secondItem="gQ9-ns-hdX" secondAttribute="centerX" id="3tv-wq-uBQ"/>
+                            <constraint firstItem="cTz-9T-1sr" firstAttribute="top" secondItem="8yx-cU-Ycm" secondAttribute="bottom" id="4Es-Pu-uzB"/>
+                            <constraint firstItem="8yx-cU-Ycm" firstAttribute="top" secondItem="gQ9-ns-hdX" secondAttribute="top" id="EqL-BV-OzG"/>
+                            <constraint firstItem="8yx-cU-Ycm" firstAttribute="centerY" secondItem="gQ9-ns-hdX" secondAttribute="centerY" id="dSx-p2-iD4"/>
+                            <constraint firstItem="8yx-cU-Ycm" firstAttribute="leading" secondItem="gQ9-ns-hdX" secondAttribute="leading" id="dwh-6L-ltd"/>
+                            <constraint firstAttribute="trailing" secondItem="8yx-cU-Ycm" secondAttribute="trailing" id="vGf-MB-Y8c"/>
                         </constraints>
                     </view>
                     <connections>
@@ -222,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0BP-Tx-yGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625.78125" y="-1221.09375"/>
+            <point key="canvasLocation" x="625.78125" y="-1221.5226939970717"/>
         </scene>
         <!--Moodle View Controller-->
         <scene sceneID="Icg-4o-z1X">
@@ -237,12 +235,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm2-qL-mG4">
-                                <rect key="frame" x="0.0" y="342" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1024" id="04p-fE-K1i"/>
-                                    <constraint firstAttribute="width" constant="768" id="X9e-H4-dO1"/>
-                                </constraints>
                             </webView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5q-OD-HLl">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
@@ -251,7 +245,7 @@
                                     <navigationItem title="Title" id="MAy-Fj-Drf">
                                         <barButtonItem key="leftBarButtonItem" title="Done" id="sEB-Mp-WH8">
                                             <connections>
-                                                <segue destination="U4h-TG-yvI" kind="show" id="NFO-19-o3X"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" modalTransitionStyle="crossDissolve" id="NFO-19-o3X"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -260,10 +254,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dm2-qL-mG4" firstAttribute="top" secondItem="SkH-1v-CYe" secondAttribute="top" id="1rW-Tw-Z1c"/>
-                            <constraint firstItem="dm2-qL-mG4" firstAttribute="leading" secondItem="SkH-1v-CYe" secondAttribute="leading" id="9tC-Up-Q0T"/>
-                            <constraint firstAttribute="trailing" secondItem="dm2-qL-mG4" secondAttribute="trailing" id="QKg-ur-fPS"/>
-                            <constraint firstItem="78o-E9-fR3" firstAttribute="top" secondItem="dm2-qL-mG4" secondAttribute="bottom" id="jYR-em-og9"/>
+                            <constraint firstItem="dm2-qL-mG4" firstAttribute="centerY" secondItem="SkH-1v-CYe" secondAttribute="centerY" id="0Lr-zW-R9m"/>
+                            <constraint firstItem="dm2-qL-mG4" firstAttribute="leading" secondItem="SkH-1v-CYe" secondAttribute="leading" id="MPo-ID-Xje"/>
+                            <constraint firstAttribute="trailing" secondItem="dm2-qL-mG4" secondAttribute="trailing" id="Yok-Cp-bj2"/>
+                            <constraint firstItem="78o-E9-fR3" firstAttribute="top" secondItem="dm2-qL-mG4" secondAttribute="bottom" id="bYM-8z-B9A"/>
+                            <constraint firstItem="dm2-qL-mG4" firstAttribute="centerX" secondItem="SkH-1v-CYe" secondAttribute="centerX" id="gt7-xM-Ibi"/>
+                            <constraint firstItem="dm2-qL-mG4" firstAttribute="top" secondItem="SkH-1v-CYe" secondAttribute="top" id="gxT-ZD-DS4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -272,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Rd-qN-cIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377.34375" y="-1246.2890625"/>
+            <point key="canvasLocation" x="1376.953125" y="-1246.5592972181551"/>
         </scene>
         <!--Back TableVC-->
         <scene sceneID="LgJ-wH-G5M">
@@ -415,7 +411,7 @@
                                     <navigationItem id="RpH-cH-mOG">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="VHV-Lu-ApT">
                                             <connections>
-                                                <segue destination="U4h-TG-yvI" kind="presentation" id="I5x-Ng-A1O"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" modalTransitionStyle="crossDissolve" id="I5x-Ng-A1O"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -788,7 +784,7 @@
                                     <navigationItem id="Ddk-qm-zhz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Hrz-N1-qCd">
                                             <connections>
-                                                <segue destination="U4h-TG-yvI" kind="presentation" id="iMK-aS-akb"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" modalTransitionStyle="crossDissolve" id="iMK-aS-akb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -854,7 +850,7 @@
                                     <navigationItem id="MaF-mA-av8">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="9Y0-yg-Wwp">
                                             <connections>
-                                                <segue destination="U4h-TG-yvI" kind="presentation" id="gd5-zR-hk4"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" modalTransitionStyle="crossDissolve" id="gd5-zR-hk4"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -899,7 +895,7 @@
                                     <navigationItem id="dKg-E3-Qaz">
                                         <barButtonItem key="leftBarButtonItem" title="Done" id="59p-Bn-8W6">
                                             <connections>
-                                                <segue destination="U4h-TG-yvI" kind="show" id="pKK-v6-6Er"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" modalTransitionStyle="crossDissolve" id="pKK-v6-6Er"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -946,7 +942,7 @@
                                     <navigationItem id="Aea-Hq-R5e">
                                         <barButtonItem key="leftBarButtonItem" title="Done" id="4ec-gn-Rv1">
                                             <connections>
-                                                <segue destination="U4h-TG-yvI" kind="presentation" id="w5M-J0-rfp"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" modalTransitionStyle="crossDissolve" id="w5M-J0-rfp"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1073,7 +1069,7 @@
                                     <navigationItem id="5Ad-1K-lHY">
                                         <barButtonItem key="leftBarButtonItem" title="Done" id="HAl-Sn-Sox">
                                             <connections>
-                                                <segue destination="U4h-TG-yvI" kind="show" id="qf2-aT-eQn"/>
+                                                <segue destination="U4h-TG-yvI" kind="presentation" modalTransitionStyle="crossDissolve" id="qf2-aT-eQn"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
