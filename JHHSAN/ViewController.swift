@@ -9,11 +9,14 @@ import UIKit
 import JTAppleCalendar
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-
+    //Endri Shkembi's Code Starts Here
     
     //Nav Bar Variables
     @IBOutlet weak var Open: UIBarButtonItem!
+    
+    //Endri Shkembi's Code Ends Here
+    
+    //Crista Mondragon Rivera's Code Starts Here
     
     //Calendar Variables
     @IBOutlet weak var monthLabel: UILabel!
@@ -59,10 +62,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //Assignment Variables
     @IBOutlet weak var addAssignmentButton: UIButton!
     
+    //Crista Mondragon Rivera's Code Ends Here
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Endri Shkembi's Code Starts Here
         //Misc.
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         Thread.sleep(forTimeInterval: 0.25) //Increases launch screen time
@@ -70,6 +75,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //Side menu
         Open.target = self.revealViewController()
         Open.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        //Endri Shkembi's Code Ends Here
+        
+        //Crista Mondragon Rivera's Code Starts Here
         
         //Cal code
         date = Date()
@@ -183,28 +192,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.detailTextLabel?.text = currentAssignments[(indexPath as NSIndexPath).row].className
         return cell
     }
-//    
-//    //Rearranges tableview cells
-//    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-//        let sourceIndex = (sourceIndexPath as NSIndexPath).row
-//        let selectedAssignment = currentAssignments[sourceIndex]
-//        currentAssignments = checkDateOfAssignments(array: assignmentArray, date: selectedDate)
-//        
-//        //Removes assignment
-//        currentAssignments.remove(at: sourceIndex)
-//        assignmentArray.remove(at: checkAssignmentInArray(array: currentAssignments, assignment: selectedAssignment))
-//    
-//        //Reinserts assignment
-//        currentAssignments.insert(selectedAssignment, at: (destinationIndexPath as NSIndexPath).row)
-//        assignmentArray.insert(selectedAssignment, at: checkAssignmentInArray(array: currentAssignments, assignment: selectedAssignment))
-//        
-//        //Reiterates through the array, should be the same
-//        printAssignmentArray(array: currentAssignments)
-//        printAssignmentArray(array: assignmentArray)
-//        
-//        tableView.reloadData()
-//    
-//    }
     
     //Deletes tableview cells
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -275,7 +262,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 }
 
-//JT Calendar Extension
+//Uses JT Calendar Extension
 extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let startDate = formatter.date(from: "01 01 2017")!
@@ -392,6 +379,9 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
     
 }
 
+//Crista Mondragon Rivera's Code Ends Here
+
+//Endri Shkembi's Code Starts Here
 
 //Function Delays Launch Screen
 func delayRunOnMainThread(_ delay: Double, closure: @escaping () -> ()) {
@@ -400,3 +390,5 @@ func delayRunOnMainThread(_ delay: Double, closure: @escaping () -> ()) {
             Double(Int64(delay * Double(NSEC_PER_SEC))) /
             Double(NSEC_PER_SEC), execute: closure)
 }
+
+//Endri Shkembi's Code Ends Here
