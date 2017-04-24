@@ -38,11 +38,11 @@
                                 <color key="backgroundColor" red="1" green="0.91174253959999996" blue="0.69831132630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="1" green="0.67758530306888387" blue="0.046458460414906866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" showsReorderControl="YES" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="tableViewCell" textLabel="0ru-W2-8cE" detailTextLabel="cSa-XQ-Smt" rowHeight="36" style="IBUITableViewCellStyleSubtitle" id="x9F-Je-2tF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="tableViewCell" textLabel="0ru-W2-8cE" detailTextLabel="cSa-XQ-Smt" rowHeight="36" style="IBUITableViewCellStyleSubtitle" id="x9F-Je-2tF">
                                         <rect key="frame" x="0.0" y="28" width="758" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x9F-Je-2tF" id="aPb-lm-U9O">
-                                            <rect key="frame" x="0.0" y="0.0" width="691" height="35.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="758" height="35.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ru-W2-8cE">
@@ -61,7 +61,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.99608820676803589" green="0.99153283220760535" blue="0.88937671820619613" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.99979746782409784" blue="0.9889529168237815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.081662133932811701" green="0.52659488341968919" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
@@ -375,6 +375,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="c96-He-9Tj">
+                                <rect key="frame" x="0.0" y="44" width="768" height="1024"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHG-Dm-QWH">
                                 <rect key="frame" x="-2" y="0.0" width="768" height="44"/>
                                 <constraints>
@@ -677,9 +680,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="c96-He-9Tj">
-                                <rect key="frame" x="0.0" y="44" width="768" height="1024"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1114,6 +1114,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="3Ij-Wz-vDs">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt4-WW-eya">
                                 <rect key="frame" x="312" y="180" width="115" height="30"/>
                                 <state key="normal" title="Hersey Activities"/>
@@ -1155,9 +1158,6 @@
                                     <action selector="moodle:" destination="VbX-MZ-7Tq" eventType="touchUpInside" id="i7N-2E-P0D"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_series___orange" translatesAutoresizingMaskIntoConstraints="NO" id="3Ij-Wz-vDs">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1256,11 +1256,11 @@
         <image name="icon-menu" width="29" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qf2-aT-eQn"/>
-        <segue reference="hqR-bU-H6G"/>
-        <segue reference="KGi-tR-A6R"/>
-        <segue reference="ac4-74-YCn"/>
-        <segue reference="3HF-6p-xKx"/>
         <segue reference="hQE-SN-aYG"/>
+        <segue reference="ac4-74-YCn"/>
+        <segue reference="KGi-tR-A6R"/>
+        <segue reference="3HF-6p-xKx"/>
+        <segue reference="gd5-zR-hk4"/>
+        <segue reference="hqR-bU-H6G"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -333,12 +333,9 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         //Gives rounded corners to selected view
         (cell as? CellView)?.selectedView.layer.cornerRadius = 30
         
-        //Insert code for changing which tableview shows here
+        //Code for changing which assignment on tableview shows
         selectedDate = customCell.todayDate
         mainTableView.reloadData()
-        
-        //Insert code for changing cell label here
-        
         
     }
     
@@ -359,7 +356,8 @@ extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSo
         
         //Insert code for changing cell label here
         selectedDate = todaysDate
-        
+    
+        mainTableView.reloadData()
     }
     
     
