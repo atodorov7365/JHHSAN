@@ -1,4 +1,7 @@
-//
+//  Code Created by JayT Received from GitHub
+//  https://github.com/jonathantribouharet/JTCalendar.git
+//  All Credit goes to Jonathan Tribouharet
+
 //  CellView.swift
 //
 //  Created by JayT on 2016-03-04.

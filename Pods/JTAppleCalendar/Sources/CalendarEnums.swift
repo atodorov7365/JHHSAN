@@ -1,4 +1,6 @@
-//
+//  Code Created by JayT Received from GitHub
+//  https://github.com/jonathantribouharet/JTCalendar.git
+//  All Credit goes to Jonathan Tribouharet
 //  CalendarEnums.swift
 //  JTAppleCalendar
 //
